@@ -77,8 +77,12 @@ Beat - the essential component of the game
 	Circle - the most basic beat, which the player just presses X or Z on at the right time
 	Approach circle - slowly fades in around a beat to show the player when to click
 	Masher - a beat where the player just mashes the X and Z keys as much as possible
-	Falling Beat(Catch the beat) - the special beats moving down the screen for catching
+	FallingBeat(Catch the beat) - the special beats moving down the screen for catching
 Catcher (for catch the beat) - the character moving at the bottom of the screen to catch beats
+MiniGame
+	Chase
+	Catch
+	Flow
 
 Responsibility List:
 
