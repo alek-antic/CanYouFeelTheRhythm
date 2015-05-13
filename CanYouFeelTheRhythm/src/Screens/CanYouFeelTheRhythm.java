@@ -1,6 +1,8 @@
+package Screens;
 
 public class CanYouFeelTheRhythm {
 	public static void main(String args[]){
-		System.out.println("First run!");
+		RhythmFrame r = new RhythmFrame();
+		r.setVisible(true);
 	}
 }
