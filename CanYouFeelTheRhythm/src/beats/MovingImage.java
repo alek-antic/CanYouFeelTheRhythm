@@ -37,7 +37,8 @@ public class MovingImage extends Ellipse2D.Double {
 	}
 	
 	public void shrinkRadius(double amount) {
-		
+		super.height -= amount;
+		super.width -= amount;
 	}
 	
 	public void applyWindowLimits(int windowWidth, int windowHeight) {
