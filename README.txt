@@ -7,6 +7,8 @@ _________                 _____.___.              ___________           .__    _
  \______  (____  /___|  /  / ______|\____/|____/   \___  / \___  >\___  >____/   |____|   |___|  /\___  >  |____|_  /___|  / ____| |__| |___|  /__|_|  /___|    |___|    |___|   
         \/     \/     \/   \/                          \/      \/     \/                       \/     \/          \/     \/\/                \/      \/<___>    <___>    <___> 
 
+Can You Feel the Rhythm?
+
 By: Aleksandar Antic & Ben Bauer   // These names not subject to change
 
 Description:
@@ -85,5 +87,12 @@ MiniGame
 	Flow
 
 Responsibility List:
+
+Potential Concerns : 
+1. Perhaps the tutorial should be part of the want to have because it is an important feature of your program that makes it "legit" and also would help the user understand the game w/o looking at the ReadMe
+2. Add the SoundEffects, FallingBeat classes to the UML(unless I didn't see them) because they will help with understanding the class structure
+3. Allow the users to choose the buttons for the game? Minor detail because everything else seems pretty solid but not all users enjoy using certain buttons to play games. 
+4. Will the user be able to upload their own songs to play to? Seems like a great function, but the "information" you require from the song seems like something that the user shouldn't have to input, but I understand that extracting that informatin would be a pain
+
 
 
