@@ -66,6 +66,9 @@ Mods - a set of difficulty increasers or decreasers for every Beatmap. This woul
 include things like “No Fail,” “Easy,” “Hidden,” “Double Time,” “Flashlight,” and “Auto”
 
 Class List:
+CanYouFeelTheRhythm - the main class
+RhythmFrame - the JFrame to hold everything
+Receiver - An interface to help control GameScreen
 MainMenuScreen - the main menu
 SongSelectScreen - the screen that you select your song on
 GameScreen - the actual screen for playing the game
@@ -74,12 +77,14 @@ Song - music of the Beatmap
 SoundEffects - the beeps and dings
 Beatmap - contains the combination of beats that make up each game
 Combo - a string of Beats together that assigns them numbers, and 
+ApproachCircle- the circle that closes in around a beat in Chase The Beat to denote the timing
 Beat - the essential component of the game
 	Slider - beats you must drag your mouse along
 	Circle - the most basic beat, which the player just presses X or Z on at the right time
 	Approach circle - slowly fades in around a beat to show the player when to click
 	Masher - a beat where the player just mashes the X and Z keys as much as possible
-	FallingBeat(Catch the beat) - the special beats moving down the screen for catching
+	FallingCircle(Catch the beat and Music Flow) - the special beats moving down the screen for catching
+	FallingSlider(Catch the beat and Music Flow) - the special beats that fall down the screen that need to be held
 Catcher (for catch the beat) - the character moving at the bottom of the screen to catch beats
 MiniGame
 	Chase
@@ -88,8 +93,8 @@ MiniGame
 
 Responsibility List:
 
-Aleksandar:
-Ben: 
+Aleksandar: all Beats and all Beatmap related classes
+Ben:  all Screens, all MiniGames, and Catcher
 
 
 Potential Concerns : 
