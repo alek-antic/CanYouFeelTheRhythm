@@ -1,7 +1,5 @@
 package beats;
 
-public class ApproachCircle {
+public class ApproachCircle extends Beat {
 
-	
-	
 }

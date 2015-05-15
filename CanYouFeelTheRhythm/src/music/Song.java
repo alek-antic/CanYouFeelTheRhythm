@@ -8,9 +8,13 @@ import javazoom.jl.player.advanced.*;
 
 
 public class Song implements Runnable {
+
 	
 	private AdvancedPlayer player;
 	private FileInputStream FIS;
+
+	
+	
 	
 	public Song(String filename) {
 		try {
@@ -22,6 +26,7 @@ public class Song implements Runnable {
 			System.out.println("*** Failed to play the file ***");	
 		}
 	}
+
 	
 	@Override
 	public void run() {
@@ -31,6 +36,7 @@ public class Song implements Runnable {
 			e.printStackTrace();
 		}
 	}
+	
 
 	public void play() {
 		new Thread(this).start();
