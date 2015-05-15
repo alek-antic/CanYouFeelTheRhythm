@@ -20,7 +20,7 @@ public class Beatmap implements Runnable {
 	private ArrayList<Combo> beatCombos;
 	private Timer time;
 	private long currentTime;
-	private DrawOnAble gamescreen
+	private Reciever gamescreen;
 	
 	
 	public Beatmap(String filename) {
@@ -28,7 +28,7 @@ public class Beatmap implements Runnable {
 		time = new Timer(1, new TimerHandler());
 		song = new Song(filename);
 		currentTime = 0l;
-		
+		gamescreen = new GameScreen();
 	}
 	
 	
@@ -44,7 +44,9 @@ public class Beatmap implements Runnable {
 		beatCombos.add(c);
 	}
 	
-	
+	public void setGamescreen(Reciever r) {
+		gamescreen = r;
+	}
 	
 	
 	private class TimerHandler implements ActionListener {
@@ -55,8 +57,8 @@ public class Beatmap implements Runnable {
 			for(Combo c: beatCombos) {
 				ArrayList<Beat> beats = c.getBeatArray();
 				for(Beat b : beats) {
-					if(b.getTime() - b.getApproach() == currentTime) {
-						gamescreen.draw(b);
+					if(b.getTime() - b.getApproach() >= currentTime && b.getTime() <= currentTime) {
+						gamescreen.recieveBeat(b);
 					}
 				}
 			}
