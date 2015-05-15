@@ -39,7 +39,7 @@ public class MovingImage extends Ellipse2D.Double {
 	/**
 	 * Creates a new moving image from an image
 	 * 
-	 * @param filename
+	 * @param img
 	 *            the image to be used for the moving image
 	 * @param x
 	 *            the x value of the moving image
