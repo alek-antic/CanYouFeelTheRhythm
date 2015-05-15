@@ -54,6 +54,14 @@ public class MovingImage extends Ellipse2D.Double {
 	}
 	
 	
+	public Image getImage() {
+		return image;
+	}
+	
+	public void setImage(Image i) {
+		image = i;
+	}
+	
 }
 
 
