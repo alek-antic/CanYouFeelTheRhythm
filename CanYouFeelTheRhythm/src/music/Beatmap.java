@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 import javax.swing.Timer;
 
+import Screens.GameScreen;
+import Screens.Reciever;
 import beats.Beat;
 
 public class Beatmap implements Runnable {
@@ -28,7 +30,6 @@ public class Beatmap implements Runnable {
 		time = new Timer(1, new TimerHandler());
 		song = new Song(filename);
 		currentTime = 0l;
-		gamescreen = new GameScreen();
 	}
 	
 	
@@ -38,7 +39,6 @@ public class Beatmap implements Runnable {
 		currentTime = 0;
 		
 	}
-	
 	
 	public void addCombo(Combo c) {
 		beatCombos.add(c);

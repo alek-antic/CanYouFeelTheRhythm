@@ -9,7 +9,9 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class GameScreen extends JPanel implements DrawOnAble, ActionListener {
+import beats.Beat;
+
+public class GameScreen extends JPanel implements Reciever, ActionListener {
 
 	private RhythmFrame f;
 	private JButton quit;
@@ -30,5 +32,11 @@ public class GameScreen extends JPanel implements DrawOnAble, ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		f.toSongSelect();
+	}
+
+	@Override
+	public void recieveBeat(Beat b) {
+		
+		
 	}
 }

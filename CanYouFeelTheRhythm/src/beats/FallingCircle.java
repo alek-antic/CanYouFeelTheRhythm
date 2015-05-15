@@ -1,9 +1,9 @@
 package beats;
 
+import java.awt.Color;
+
 public class FallingCircle extends Circle {
 
-<<<<<<< HEAD
-=======
 	
 	public FallingCircle(String filename, int x, int y, int r, long time) {
 		super(filename, x, y, r, time);
@@ -16,6 +16,4 @@ public class FallingCircle extends Circle {
 
 	}
 	
-	
->>>>>>> origin/Beatmaps
 }

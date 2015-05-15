@@ -1,8 +1,5 @@
 package beats;
 
-<<<<<<< HEAD
-public abstract class Beat {
-=======
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
@@ -35,7 +32,7 @@ public abstract class Beat extends MovingImage {
 	        int width = image.getWidth();
 	        int height = image.getHeight();
 	        WritableRaster raster = image.getRaster();
->>>>>>> origin/Beatmaps
+
 
 	        for (int xx = 0; xx < width; xx++) {
 	            for (int yy = 0; yy < height; yy++) {

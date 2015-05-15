@@ -88,6 +88,10 @@ MiniGame
 
 Responsibility List:
 
+Aleksandar:
+Ben: 
+
+
 Potential Concerns : 
 1. Perhaps the tutorial should be part of the want to have because it is an important feature of your program that makes it "legit" and also would help the user understand the game w/o looking at the ReadMe
 2. Add the SoundEffects, FallingBeat classes to the UML(unless I didn't see them) because they will help with understanding the class structure
