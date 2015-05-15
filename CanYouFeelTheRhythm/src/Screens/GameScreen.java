@@ -11,11 +11,21 @@ import javax.swing.JPanel;
 
 import beats.Beat;
 
+/**
+ * The Screen on which CanYouFeelTheRhythm is played
+ * @author Ben Bauer
+ * @version 5/15/15
+ *
+ */
 public class GameScreen extends JPanel implements Reciever, ActionListener {
 
 	private RhythmFrame f;
 	private JButton quit;
 
+	/**
+	 * Creates a new GameScreen on the given frame
+	 * @param frame the frame that this screen is constructed around
+	 */
 	public GameScreen(RhythmFrame frame) {
 		super();
 
@@ -35,8 +45,8 @@ public class GameScreen extends JPanel implements Reciever, ActionListener {
 	}
 
 	@Override
-	public void recieveBeat(Beat b) {
-		
+	public Beat recieveBeat(Beat b) {
+		return b;
 		
 	}
 }

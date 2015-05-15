@@ -9,10 +9,21 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 
+/**
+ * The main menu of the game. Provides access to the SongSelectScreen
+ * 
+ * @author Ben Bauer 
+ * @version 5/15/15
+ *
+ */
 public class MainMenuScreen extends JPanel implements ActionListener {
 
 	private RhythmFrame f;
 
+	/**
+	 * Constructs a MainMenuScreen on the given frame
+	 * @param frame the frame that this screen is constructed around
+	 */
 	public MainMenuScreen(RhythmFrame frame) {
 		super();
 

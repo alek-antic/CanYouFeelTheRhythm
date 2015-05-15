@@ -5,6 +5,12 @@ import java.awt.CardLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+/**
+ * The JFrame on which CanYouFeelTheRhythm is created
+ * @author Ben Bauer
+ * @version 5/15/15
+ *
+ */
 public class RhythmFrame extends JFrame {
 
 	JPanel framePanel;
@@ -28,6 +34,9 @@ public class RhythmFrame extends JFrame {
 		setResizable(true);
 	}
 
+	/**
+	 * Changes the current screen to the SongSelectScreen
+	 */
 	public void toSongSelect() {
 
 		((CardLayout) framePanel.getLayout()).show(framePanel, "SongSelect");
@@ -35,6 +44,9 @@ public class RhythmFrame extends JFrame {
 		requestFocus();
 	}
 
+	/**
+	 * Changes the current screen to the MainMenuScreen
+	 */
 	public void toMain() {
 
 		((CardLayout) framePanel.getLayout()).show(framePanel, "Main");
@@ -42,6 +54,9 @@ public class RhythmFrame extends JFrame {
 		requestFocus();
 	}
 
+	/**
+	 * Changes the current screen to the GameScreen
+	 */
 	public void toGame() {
 
 		((CardLayout) framePanel.getLayout()).show(framePanel, "Game");
