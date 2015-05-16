@@ -1,5 +1,6 @@
 package Screens;
 
+import music.Beatmap;
 import beats.Beat;
 /**
  * 
@@ -13,5 +14,6 @@ public interface Reciever {
 	 * @param b a beat to be recieved
 	 * @return the beat b
 	 */
-	Beat recieveBeat(Beat b);
+	void recieveBeat(Beat b);
+	void recieveBeatmap(Beatmap b);
 }

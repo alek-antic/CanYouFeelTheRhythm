@@ -21,10 +21,10 @@ public class Combo {
 	 * @param color
 	 *            of each beat in the combo
 	 */
-	public Combo(Color color) {
+	public Combo(/*Color color*/) {
 		beats = new ArrayList<Beat>();
-		c = color;
-		setColor(color);
+		//c = color;
+		//setColor(color);
 	}
 
 	/**
@@ -41,10 +41,12 @@ public class Combo {
 		return beats;
 	}
 
+	/*
 	public void setColor(Color c) {
 		for (Beat b : beats) {
 			b.setColor(c);
 		}
 	}
+	*/
 
 }

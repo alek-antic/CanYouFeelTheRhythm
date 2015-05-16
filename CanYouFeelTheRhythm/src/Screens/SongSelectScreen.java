@@ -1,14 +1,20 @@
 package Screens;
 
 import java.awt.BorderLayout;
-
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import beats.Beat;
+import beats.CircleBeat;
+import music.Beatmap;
+import music.Combo;
 
 /**
  * The screen on which the game itself is drawn
@@ -22,6 +28,8 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 	private JButton toMM;
 	private JButton song1;
 	private JButton song2;
+	private Reciever r;
+	private ArrayList<Beatmap> beatmaps;
 
 	/**
 	 * Creates a new SongSelectScreen on the given RhythmFrame
@@ -49,14 +57,28 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 		selectSong.add(song1);
 		selectSong.add(song2);
 		add(selectSong, BorderLayout.CENTER);
+		
+		beatmaps = new ArrayList<Beatmap>();
+		beatmaps.add(new Beatmap("lib/chasingtime.mp3"));
+		Combo c = new Combo();
+		c.addBeat(new CircleBeat("lib/Images/circle.png", 250, 250, 50, 5000));
+		beatmaps.get(0).addCombo(new Combo());
+		
 	}
 
+	public void setReciever(Reciever r) {
+		this.r = r;
+	}
+	
+	
 	public void actionPerformed(ActionEvent e) {
 		Object source = e.getSource();
 
 		if (source == toMM)
 			f.toMain();
-		if (source == song1 || source == song2)
+		if (source == song1 || source == song2) {
 			f.toGame();
+			r.recieveBeatmap(new Beatmap("lib/chasingtime.mp3"));
+		}
 	}
 }

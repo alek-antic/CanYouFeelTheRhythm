@@ -35,7 +35,7 @@ public abstract class Beat extends MovingImage {
 	public Beat(String filename, int x, int y, int r, long time) {
 		super(filename, x, y, r, r);
 		this.time = time;
-		setColor(new Color(72, 196, 224));
+		//setColor(new Color(72, 196, 224));
 	}
 
 	/**

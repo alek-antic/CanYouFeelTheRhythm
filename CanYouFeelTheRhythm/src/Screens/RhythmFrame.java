@@ -21,6 +21,7 @@ public class RhythmFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		framePanel = new JPanel();
 		framePanel.setLayout(new CardLayout());
+		
 
 		MainMenuScreen mm = new MainMenuScreen(this);
 		SongSelectScreen ss = new SongSelectScreen(this);
@@ -29,7 +30,10 @@ public class RhythmFrame extends JFrame {
 		framePanel.add(ss, "SongSelect");
 		framePanel.add(gs, "Game");
 
+		ss.setReciever(gs);
+		
 		add(framePanel);
+		
 
 		setResizable(true);
 	}

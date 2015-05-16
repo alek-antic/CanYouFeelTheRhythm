@@ -47,6 +47,7 @@ public class Beatmap implements Runnable {
 	public void run() {
 		time.start();
 		currentTime = 0;
+		song.play();
 
 	}
 
