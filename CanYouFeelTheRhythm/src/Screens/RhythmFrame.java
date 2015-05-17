@@ -5,8 +5,11 @@ import java.awt.CardLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import music.Beatmap;
+
 /**
  * The JFrame on which CanYouFeelTheRhythm is created
+ * 
  * @author Ben Bauer
  * @version 5/15/15
  *
@@ -14,6 +17,9 @@ import javax.swing.JPanel;
 public class RhythmFrame extends JFrame {
 
 	JPanel framePanel;
+	MainMenuScreen mm;
+	SongSelectScreen ss;
+	GameScreen gs;
 
 	public RhythmFrame() {
 		super("Can you feel the rhythm?");
@@ -21,19 +27,15 @@ public class RhythmFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		framePanel = new JPanel();
 		framePanel.setLayout(new CardLayout());
-		
 
-		MainMenuScreen mm = new MainMenuScreen(this);
-		SongSelectScreen ss = new SongSelectScreen(this);
-		GameScreen gs = new GameScreen(this);
+		mm = new MainMenuScreen(this);
+		ss = new SongSelectScreen(this);
+		gs = new GameScreen(this);
 		framePanel.add(mm, "Main");
 		framePanel.add(ss, "SongSelect");
 		framePanel.add(gs, "Game");
 
-		ss.setReciever(gs);
-		
 		add(framePanel);
-		
 
 		setResizable(true);
 	}
@@ -59,12 +61,13 @@ public class RhythmFrame extends JFrame {
 	}
 
 	/**
-	 * Changes the current screen to the GameScreen
+	 * Changes the current screen to the GameScreen and sets the beatmap
 	 */
-	public void toGame() {
-
+	public void toGame(Beatmap b) {
+		gs.recieveBeatmap(b);
+		b.setGamescreen(gs);
+		
 		((CardLayout) framePanel.getLayout()).show(framePanel, "Game");
-
 		requestFocus();
 	}
 }
