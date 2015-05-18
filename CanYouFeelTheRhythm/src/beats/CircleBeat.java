@@ -12,7 +12,8 @@ import java.awt.Color;
 public class CircleBeat extends Beat {
 
 	private int number;
-
+	private ApproachCircle c;
+	
 	/**
 	 * Creates a new circle beat
 	 * 
@@ -29,6 +30,7 @@ public class CircleBeat extends Beat {
 	 */
 	public CircleBeat(String filename, int x, int y, int r, long time) {
 		super(filename, x, y, r, time);
+		c = new ApproachCircle("approach.png", x, y, r + 50, r + 50);
 	}
 
 	/**

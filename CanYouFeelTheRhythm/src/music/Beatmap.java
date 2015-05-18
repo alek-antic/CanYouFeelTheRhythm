@@ -73,9 +73,10 @@ public class Beatmap implements Runnable {
 			for (Combo c : beatCombos) {
 				ArrayList<Beat> beats = c.getBeatArray();
 				for (Beat b : beats) {
-					if (b.getTime() - b.getApproach() >= currentTime
-							&& b.getTime() <= currentTime) {
+					if (b.getTime() - b.getApproach() <= currentTime
+							&& b.getTime() >= currentTime) {
 						gamescreen.recieveBeat(b);
+						b.getApproachCirlce().act();
 					}
 				}
 			}

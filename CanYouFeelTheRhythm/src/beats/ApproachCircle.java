@@ -27,5 +27,11 @@ public class ApproachCircle extends MovingImage {
 		super(filename, x, y, w, h);
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	public void act() {
+		height-= 0.2;
+		width-= 0.2;
+	}
 
 }

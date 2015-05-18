@@ -45,7 +45,7 @@ public class GameScreen extends JPanel implements Reciever, ActionListener {
 	
 	@Override
 	public void paintComponent(Graphics g) {
-		
+		super.paintComponent(g);
 		if(beatToBeDrawn != null)
 		beatToBeDrawn.draw(g, this);
 		
