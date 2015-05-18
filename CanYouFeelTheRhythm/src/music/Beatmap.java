@@ -13,6 +13,7 @@ import javax.swing.Timer;
 import Screens.GameScreen;
 import Screens.Reciever;
 import beats.Beat;
+import beats.CircleBeat;
 
 /**
  * stores all beats to and the song
@@ -27,6 +28,8 @@ public class Beatmap implements Runnable {
 	private Timer time;
 	private long currentTime;
 	private Reciever gamescreen;
+	private Beat currentBeat;
+	private KeyListener k;
 
 	/**
 	 * creates a new beatmap
@@ -39,6 +42,7 @@ public class Beatmap implements Runnable {
 		time = new Timer(1, new TimerHandler());
 		song = new Song(filename);
 		currentTime = 0l;
+		k = new KeyHandler();
 	}
 
 	/**
@@ -48,7 +52,7 @@ public class Beatmap implements Runnable {
 		time.start();
 		currentTime = 0;
 		song.play();
-
+		
 	}
 
 	/**
@@ -63,6 +67,7 @@ public class Beatmap implements Runnable {
 
 	public void setGamescreen(Reciever r) {
 		gamescreen = r;
+		gamescreen.setKeyListener(new KeyHandler());
 	}
 
 	private class TimerHandler implements ActionListener {
@@ -73,9 +78,12 @@ public class Beatmap implements Runnable {
 			for (Combo c : beatCombos) {
 				ArrayList<Beat> beats = c.getBeatArray();
 				for (Beat b : beats) {
-					if (b.getTime() - b.getApproach() >= currentTime
-							&& b.getTime() <= currentTime) {
+					currentBeat = b;
+					if (b.getTime() - b.getApproach() <= currentTime
+							&& b.getTime() >= currentTime) {
 						gamescreen.recieveBeat(b);
+					}else if(b.getTime() <= currentTime){
+						gamescreen.recieveBeat(null);
 					}
 				}
 			}
@@ -83,13 +91,18 @@ public class Beatmap implements Runnable {
 		}
 
 	}
-
+	
 	private class KeyHandler implements KeyListener {
 
+		private long timePressed;
+		
 		@Override
 		public void keyPressed(KeyEvent arg0) {
-			// TODO Auto-generated method stub
-
+			timePressed = currentTime;
+			if(Math.abs(timePressed - currentBeat.getTime()) <= 100){
+				System.out.println("You dont suck");
+				gamescreen.recieveBeat(null);
+			}
 		}
 
 		@Override

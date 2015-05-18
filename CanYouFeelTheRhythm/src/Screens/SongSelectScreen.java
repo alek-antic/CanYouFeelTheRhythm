@@ -47,7 +47,11 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 		b = new Beatmap("lib/chasingtime.mp3");
 		Combo testCombo = new Combo();
 		Beat testBeat = new CircleBeat("lib/Images/circle.png", 100, 100, 100, 1000);
+		Beat testBeat2 = new CircleBeat("lib/Images/circle.png", 200, 200, 100, 2000);
+		Beat testBeat3 = new CircleBeat("lib/Images/circle.png", 300, 300, 100, 3000);
 		testCombo.addBeat(testBeat);
+		testCombo.addBeat(testBeat2);
+		testCombo.addBeat(testBeat3);
 		b.addCombo(testCombo);
 
 		JLabel ssLabel = new JLabel("Select Your Song");

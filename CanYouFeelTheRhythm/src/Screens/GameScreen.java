@@ -5,10 +5,13 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
 import java.awt.geom.AffineTransform;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
 import music.Beatmap;
 import beats.Beat;
 import beats.CircleBeat;
@@ -51,7 +54,8 @@ public class GameScreen extends JPanel implements Reciever, ActionListener {
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		currentBeat.draw(g, this);
+		if(currentBeat != null)
+			currentBeat.draw(g, this);
 	}
 
 	@Override
@@ -69,6 +73,12 @@ public class GameScreen extends JPanel implements Reciever, ActionListener {
 	public void recieveBeatmap(Beatmap b) {
 		bmap = b;	
 		new Thread(bmap).start();
+	}
+
+	@Override
+	public void setKeyListener(KeyListener k) {
+		addKeyListener(k);
+		this.requestFocus();
 	}
 
 }
