@@ -98,11 +98,10 @@ public class Beatmap implements Runnable {
 		
 		@Override
 		public void keyPressed(KeyEvent arg0) {
-			timePressed = currentTime;
-			if(Math.abs(timePressed - currentBeat.getTime()) <= 100){
+			//timePressed = currentTime;
+			//if(Math.abs(timePressed - currentBeat.getTime()) <= 100){
 				System.out.println("You dont suck");
-				gamescreen.recieveBeat(null);
-			}
+			//}
 		}
 
 		@Override

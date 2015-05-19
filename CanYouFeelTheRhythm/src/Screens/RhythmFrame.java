@@ -69,5 +69,6 @@ public class RhythmFrame extends JFrame {
 		
 		((CardLayout) framePanel.getLayout()).show(framePanel, "Game");
 		requestFocus();
+		gs.requestFocus();
 	}
 }

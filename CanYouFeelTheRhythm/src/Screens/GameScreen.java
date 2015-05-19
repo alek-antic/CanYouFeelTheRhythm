@@ -78,7 +78,10 @@ public class GameScreen extends JPanel implements Reciever, ActionListener {
 	@Override
 	public void setKeyListener(KeyListener k) {
 		addKeyListener(k);
-		this.requestFocus();
 	}
 
+	public void deleteCurrent(){
+		currentBeat = null;
+		repaint();
+	}
 }

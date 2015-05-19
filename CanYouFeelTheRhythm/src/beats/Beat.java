@@ -94,5 +94,4 @@ public abstract class Beat extends MovingImage {
 	public long getApproach() {
 		return approachRate;
 	}
-
 }
