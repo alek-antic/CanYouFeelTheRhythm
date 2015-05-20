@@ -1,6 +1,7 @@
 package Screens;
 
 import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
 
 import music.Beatmap;
 import beats.Beat;
@@ -18,5 +19,5 @@ public interface Reciever {
 	 */
 	void recieveBeat(Beat b);
 	void recieveBeatmap(Beatmap b);
-	void setKeyListener(KeyListener k);
+	void setListeners(KeyListener k, MouseListener m);
 }

@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
 import java.awt.geom.AffineTransform;
 
 import javax.swing.JButton;
@@ -23,7 +24,7 @@ import beats.CircleBeat;
  * @version 5/15/15
  *
  */
-public class GameScreen extends JPanel implements Reciever, ActionListener {
+public class GameScreen extends JPanel implements ActionListener {
 
 	private RhythmFrame f;
 	private JButton quit;
@@ -51,37 +52,33 @@ public class GameScreen extends JPanel implements Reciever, ActionListener {
 		currentBeat = new CircleBeat("lib/Images/circle.png", 0, 0, 0, 0);
 	}
 
-	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		if(currentBeat != null)
 			currentBeat.draw(g, this);
 	}
 
-	@Override
 	public void actionPerformed(ActionEvent e) {
 		f.toSongSelect();
 	}
 
-	@Override
 	public void recieveBeat(Beat b) {
 		currentBeat = b;
 		repaint();
 	}
 
-	@Override
 	public void recieveBeatmap(Beatmap b) {
 		bmap = b;	
 		new Thread(bmap).start();
 	}
 
-	@Override
-	public void setKeyListener(KeyListener k) {
+	public void setListeners(KeyListener k, MouseListener m) {
 		addKeyListener(k);
+		addMouseListener(m);
 	}
 
 	public void deleteCurrent(){
-		currentBeat = null;
+		currentBeat.moveToLocation(-1000, -1000);
 		repaint();
 	}
 }

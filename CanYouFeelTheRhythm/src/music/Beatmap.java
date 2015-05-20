@@ -27,7 +27,7 @@ public class Beatmap implements Runnable {
 	private ArrayList<Combo> beatCombos;
 	private Timer time;
 	private long currentTime;
-	private Reciever gamescreen;
+	private GameScreen gamescreen;
 	private Beat currentBeat;
 	private KeyListener k;
 
@@ -51,8 +51,8 @@ public class Beatmap implements Runnable {
 	public void run() {
 		time.start();
 		currentTime = 0;
-		song.play();
-		
+		//song.play();
+
 	}
 
 	/**
@@ -65,9 +65,9 @@ public class Beatmap implements Runnable {
 		beatCombos.add(c);
 	}
 
-	public void setGamescreen(Reciever r) {
-		gamescreen = r;
-		gamescreen.setKeyListener(new KeyHandler());
+	public void setGamescreen(GameScreen gs) {
+		gamescreen = gs;
+		gamescreen.setListeners(new KeyHandler(), new MouseHandler());
 	}
 
 	private class TimerHandler implements ActionListener {
@@ -78,11 +78,11 @@ public class Beatmap implements Runnable {
 			for (Combo c : beatCombos) {
 				ArrayList<Beat> beats = c.getBeatArray();
 				for (Beat b : beats) {
-					currentBeat = b;
 					if (b.getTime() - b.getApproach() <= currentTime
 							&& b.getTime() >= currentTime) {
 						gamescreen.recieveBeat(b);
-					}else if(b.getTime() <= currentTime){
+						currentBeat = b;
+					} else if (b.getTime() <= currentTime) {
 						gamescreen.recieveBeat(null);
 					}
 				}
@@ -91,16 +91,17 @@ public class Beatmap implements Runnable {
 		}
 
 	}
-	
+
 	private class KeyHandler implements KeyListener {
 
 		private long timePressed;
-		
+
 		@Override
 		public void keyPressed(KeyEvent arg0) {
-			//timePressed = currentTime;
+			timePressed = currentTime;
 			//if(Math.abs(timePressed - currentBeat.getTime()) <= 100){
-				System.out.println("You dont suck");
+			System.out.println("You dont suck");
+			gamescreen.deleteCurrent();
 			//}
 		}
 
@@ -121,8 +122,12 @@ public class Beatmap implements Runnable {
 	private class MouseHandler implements MouseListener {
 
 		@Override
-		public void mouseClicked(MouseEvent arg0) {
-			// TODO Auto-generated method stub
+		public void mouseClicked(MouseEvent e) {
+			if (e.getX() > currentBeat.getX()
+					&& e.getX() < currentBeat.getX() + currentBeat.getWidth()
+					&& e.getY() > currentBeat.getX()
+					&& e.getY() < currentBeat.getY() + currentBeat.getHeight())
+				System.out.println("Kappa");
 
 		}
 
