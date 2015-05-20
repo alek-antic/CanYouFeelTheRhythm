@@ -4,6 +4,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
 
+import javax.swing.ImageIcon;
+
 /**
  * superclass for all the beats that the player ineracts with
  * 
@@ -17,6 +19,8 @@ public abstract class Beat extends MovingImage {
 	private long time;
 	private final long approachRate = 500;
 	private Color c;
+	private int number;
+	private Boolean clickable;
 
 	/**
 	 * Creates a new beat
@@ -35,6 +39,7 @@ public abstract class Beat extends MovingImage {
 	public Beat(String filename, int x, int y, int r, long time) {
 		super(filename, x, y, r, r);
 		this.time = time;
+		clickable = true;
 		//setColor(new Color(72, 196, 224));
 	}
 
@@ -57,6 +62,7 @@ public abstract class Beat extends MovingImage {
 	public Beat(String filename, int x, int y, int r, long time, Color c) {
 		this(filename, x, y, r, time);
 		setColor(c);
+		clickable = true;
 	}
 
 	/**
@@ -93,5 +99,25 @@ public abstract class Beat extends MovingImage {
 
 	public long getApproach() {
 		return approachRate;
+	}
+	
+	public void deleteImage(){
+		setImage(null);
+	}
+	public void resetImage(){
+		setImage((new ImageIcon("lib/Images/" + "CircleBeat" + "" /*+ number*/ + ".png")).getImage()); 
+		clickable = true;
+	}
+
+	public void setNumber(int n) {
+		number = n;
+	}
+	
+	public boolean getClickable(){
+		return clickable;
+	}
+	
+	public void setClickable(Boolean b){
+		clickable = b;
 	}
 }

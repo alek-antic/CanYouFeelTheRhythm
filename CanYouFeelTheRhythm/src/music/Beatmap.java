@@ -1,5 +1,7 @@
 package music;
 
+import java.awt.MouseInfo;
+import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -49,9 +51,14 @@ public class Beatmap implements Runnable {
 	 * starts the timer and beats will start appearing
 	 */
 	public void run() {
+		for(Combo c: beatCombos){
+			for(Beat b: c.getBeatArray()){
+				b.resetImage();
+			}
+		}
 		time.start();
 		currentTime = 0;
-		//song.play();
+		// song.play();
 
 	}
 
@@ -67,7 +74,7 @@ public class Beatmap implements Runnable {
 
 	public void setGamescreen(GameScreen gs) {
 		gamescreen = gs;
-		gamescreen.setListeners(new KeyHandler(), new MouseHandler());
+		gamescreen.setListeners(new KeyHandler());
 	}
 
 	private class TimerHandler implements ActionListener {
@@ -99,10 +106,20 @@ public class Beatmap implements Runnable {
 		@Override
 		public void keyPressed(KeyEvent arg0) {
 			timePressed = currentTime;
-			//if(Math.abs(timePressed - currentBeat.getTime()) <= 100){
-			System.out.println("You dont suck");
-			gamescreen.deleteCurrent();
-			//}
+			Point p = MouseInfo.getPointerInfo().getLocation();
+			Point p2 = gamescreen.getLocationOnScreen();
+			double mouseX = p.getX() - p2.getX();
+			double mouseY = p.getY() - p2.getY();
+
+			if (Math.abs(timePressed - currentBeat.getTime()) <= 500
+					&& mouseX > currentBeat.getX()
+					&& mouseX < currentBeat.getX() + currentBeat.getWidth()
+					&& mouseY > currentBeat.getX()
+					&& mouseY < currentBeat.getY() + currentBeat.getHeight() && currentBeat.getClickable()) {
+				System.out.println("You dont suck");
+				gamescreen.deleteCurrent();
+				currentBeat.setClickable(false);
+			}
 		}
 
 		@Override
@@ -113,44 +130,6 @@ public class Beatmap implements Runnable {
 
 		@Override
 		public void keyTyped(KeyEvent arg0) {
-			// TODO Auto-generated method stub
-
-		}
-
-	}
-
-	private class MouseHandler implements MouseListener {
-
-		@Override
-		public void mouseClicked(MouseEvent e) {
-			if (e.getX() > currentBeat.getX()
-					&& e.getX() < currentBeat.getX() + currentBeat.getWidth()
-					&& e.getY() > currentBeat.getX()
-					&& e.getY() < currentBeat.getY() + currentBeat.getHeight())
-				System.out.println("Kappa");
-
-		}
-
-		@Override
-		public void mouseEntered(MouseEvent arg0) {
-			// TODO Auto-generated method stub
-
-		}
-
-		@Override
-		public void mouseExited(MouseEvent arg0) {
-			// TODO Auto-generated method stub
-
-		}
-
-		@Override
-		public void mousePressed(MouseEvent arg0) {
-			// TODO Auto-generated method stub
-
-		}
-
-		@Override
-		public void mouseReleased(MouseEvent arg0) {
 			// TODO Auto-generated method stub
 
 		}

@@ -54,7 +54,7 @@ public class GameScreen extends JPanel implements ActionListener {
 
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		if(currentBeat != null)
+		if (currentBeat != null)
 			currentBeat.draw(g, this);
 	}
 
@@ -68,17 +68,16 @@ public class GameScreen extends JPanel implements ActionListener {
 	}
 
 	public void recieveBeatmap(Beatmap b) {
-		bmap = b;	
+		bmap = b;
 		new Thread(bmap).start();
 	}
 
-	public void setListeners(KeyListener k, MouseListener m) {
+	public void setListeners(KeyListener k) {
 		addKeyListener(k);
-		addMouseListener(m);
 	}
 
-	public void deleteCurrent(){
-		currentBeat.moveToLocation(-1000, -1000);
+	public void deleteCurrent() {
+		currentBeat.setImage(null);
 		repaint();
 	}
 }

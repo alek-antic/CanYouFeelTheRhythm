@@ -40,6 +40,12 @@ public class Combo {
 	public ArrayList<Beat> getBeatArray() {
 		return beats;
 	}
+	
+	public void setNumbers(){
+		for(int i = 1; i < beats.size(); i++){
+			beats.get(i).setNumber(i);
+		}
+	}
 
 	/*
 	public void setColor(Color c) {
