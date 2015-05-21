@@ -6,16 +6,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import javax.swing.Timer;
 
 import Screens.GameScreen;
-import Screens.Reciever;
 import beats.Beat;
-import beats.CircleBeat;
 
 /**
  * stores all beats to and the song
@@ -25,6 +21,7 @@ import beats.CircleBeat;
 public class Beatmap implements Runnable {
 
 	private Song song;
+	private Song clap;
 	private Score score;
 	private ArrayList<Combo> beatCombos;
 	private Timer time;
@@ -45,6 +42,7 @@ public class Beatmap implements Runnable {
 		song = new Song(filename);
 		currentTime = 0l;
 		k = new KeyHandler();
+		clap = new Song("lib/clap.mp3");
 	}
 
 	/**
@@ -58,7 +56,7 @@ public class Beatmap implements Runnable {
 		}
 		time.start();
 		currentTime = 0;
-		// song.play();
+		song.play();
 
 	}
 
@@ -104,7 +102,7 @@ public class Beatmap implements Runnable {
 		private long timePressed;
 
 		@Override
-		public void keyPressed(KeyEvent arg0) {
+		public void keyPressed(KeyEvent e) {
 			timePressed = currentTime;
 			Point p = MouseInfo.getPointerInfo().getLocation();
 			Point p2 = gamescreen.getLocationOnScreen();
@@ -115,10 +113,11 @@ public class Beatmap implements Runnable {
 					&& mouseX > currentBeat.getX()
 					&& mouseX < currentBeat.getX() + currentBeat.getWidth()
 					&& mouseY > currentBeat.getX()
-					&& mouseY < currentBeat.getY() + currentBeat.getHeight() && currentBeat.getClickable()) {
-				System.out.println("You dont suck");
+					&& mouseY < currentBeat.getY() + currentBeat.getHeight() && currentBeat.getClickable()
+					&& (e.getKeyCode() == KeyEvent.VK_Z || e.getKeyCode() == KeyEvent.VK_X)) {
 				gamescreen.deleteCurrent();
 				currentBeat.setClickable(false);
+				clap.play();
 			}
 		}
 
