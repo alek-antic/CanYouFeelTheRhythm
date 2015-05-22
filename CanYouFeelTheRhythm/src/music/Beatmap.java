@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 import javax.swing.Timer;
 
+import screens.GameScreen;
 import jay.jaysound.JayLayer;
-import Screens.GameScreen;
 import beats.Beat;
 import beats.CircleBeat;
 import beats.Masher;

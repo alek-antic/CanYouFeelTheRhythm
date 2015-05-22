@@ -14,33 +14,23 @@ By: Aleksandar Antic & Ben Bauer   // These names not subject to change
 Description:
 Enjoy your favorite music in a new way! Can You Feel The Rhythm??? combines music with fast paced gameplay
 that is sure to increase your appreciation for song that you hear everyday! Can You Feel The Rhythm???
-combines different minigames to optimize the player’s experience. The game features aspects of other games,
-like Music Flow, Chase the Beat, and Catch the Beat. Chase the Beat contains beats and sliders appearing 
-around the screen, and the player must move the mouse and clock them as they appear for points. Music Flow 
-follows the classic format of beats falling from the top of the screen, and hitting the corresponding buttons
-as the fall. Catch the Beat consist of falling beats as well, except the player must move the onscreen
-character left and right to the music in order to catch each beat as the fall. Anyone who regularly plays 
-rhythm games such as these should feel right at home, pounding away at their keyboard. Even those just getting
- into rhythm based games can set the difficulty low and rock out to their favorite songs.
+combines music and timing to optimize the player’s experience. Chase the Beat contains beats and sliders appearing 
+around the screen, and the player must move the mouse and clock them as they appear for points. Anyone who regularly plays 
+rhythm games should feel right at home, pounding away at their keyboard. Even those just starting out in the
+rhythm genre can set the difficulty low and rock out to their favorite songs.
 
 Instructions:
 
 Chase the Beat: Move the mouse and press either Z or X to score the notes
 
-Catch the Beat: Move a character back and forth with the arrow keys. The character can speed up by pressing the left shift key
-
-Music Flow: Uses the D, F, J, K and spacebar to trigger the right notes at the right times.
-
-Be prepared to switch between games at any time!
-
 Feature List:
 
 Must Have:
-Menus - navigation through the game, in order to make use easier
+x Menus - navigation through the game, in order to make use easier
 
-Osu! - game mode #1 - beats scattered across screen at proper timing, react properly to mouseover and key presses
+x Chase the Beat - game mode #1 - beats scattered across screen at proper timing, react properly to mouseover and key presses
 
-2 default beatmaps- a minimum of two songs for everyone to play in class, hopefully more
+TO BE DONE THIS WEEKEND (Test beats in place) 2 default beatmaps- a minimum of two songs for everyone to play in class, hopefully more
 
 Want to have:
 Beatmap Editor - An in-app way to create or edit beatmaps. Would take in an mp3 file,
@@ -81,7 +71,7 @@ Beat - the essential component of the game
 Responsibility List:
 
 Aleksandar: all Beats and all Beatmap related classes
-Ben:  all Screens, all MiniGames, and Catcher
+Ben:  all Screens, and drawing code
 
 
 

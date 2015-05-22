@@ -1,4 +1,4 @@
-package Screens;
+package screens;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -30,7 +30,6 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 	private JButton song1;
 	private JButton song2;
 	private Beatmap b;
-	private Reciever r;
 
 	/**
 	 * Creates a new SongSelectScreen on the given RhythmFrame

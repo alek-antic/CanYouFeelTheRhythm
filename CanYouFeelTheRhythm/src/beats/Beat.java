@@ -21,7 +21,7 @@ public abstract class Beat extends MovingImage {
 	private Color c;
 
 	private int number;
-	private Boolean clickable;
+	private boolean clickable;
 
 	private ApproachCircle approachCircle;
 
