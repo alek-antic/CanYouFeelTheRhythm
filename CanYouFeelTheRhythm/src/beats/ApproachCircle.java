@@ -14,7 +14,7 @@ import java.awt.image.WritableRaster;
 public class ApproachCircle extends MovingImage {
 
 	private Color c;
-	
+
 	/**
 	 * Creates a new approach circle
 	 * 
@@ -31,18 +31,22 @@ public class ApproachCircle extends MovingImage {
 	 */
 	public ApproachCircle(String filename, int x, int y, int r, Color c) {
 		super(filename, x, y, r, r);
-		//setColor(c);
+		// setColor(c);
 	}
-	
-	
+
+	/**
+	 * how this ApproachCircle should act in one frame of time
+	 * 
+	 * @post radius shrinks, circle stays in the same place relative to the
+	 *       center
+	 */
 	public void act() {
 		x += 0.5;
 		y += 0.5;
-		if(width >= 0)
+		if (width >= 0)
 			changeRadiusBy(-1);
 	}
-	
-	
+
 	/**
 	 * Changes the color of the beat
 	 * 

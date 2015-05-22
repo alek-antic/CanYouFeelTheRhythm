@@ -25,7 +25,6 @@ public abstract class Beat extends MovingImage {
 
 	private ApproachCircle approachCircle;
 
-
 	/**
 	 * Creates a new beat
 	 * 
@@ -40,7 +39,8 @@ public abstract class Beat extends MovingImage {
 	 * @param time
 	 *            the time the beat should be pressed
 	 */
-	public Beat(String filename, int x, int y, int r, long time, ApproachCircle circle) {
+	public Beat(String filename, int x, int y, int r, long time,
+			ApproachCircle circle) {
 		super(filename, x, y, r, r);
 		this.time = time;
 
@@ -48,7 +48,7 @@ public abstract class Beat extends MovingImage {
 
 		approachCircle = circle;
 
-		//setColor(new Color(72, 196, 224));
+		// setColor(new Color(72, 196, 224));
 	}
 
 	/**
@@ -67,9 +67,10 @@ public abstract class Beat extends MovingImage {
 	 * @param c
 	 *            the color of the beat
 	 */
-	public Beat(String filename, int x, int y, int r, long time, ApproachCircle circle, Color c) {
+	public Beat(String filename, int x, int y, int r, long time,
+			ApproachCircle circle, Color c) {
 		this(filename, x, y, r, time, circle);
-		//setColor(c);
+		// setColor(c);
 		clickable = true;
 	}
 
@@ -108,34 +109,38 @@ public abstract class Beat extends MovingImage {
 	public long getApproach() {
 		return approachRate;
 	}
-	
-	public void deleteImage(){
+
+	/**
+	 * deletes the image from this Beat
+	 */
+	public void deleteImage() {
 		setImage(null);
 	}
+
+	/**
+	 * resets the Image to the proper Image before the start of the beatmap
+	 */
 	public abstract void resetImage();
 
-
 	public void setNumber(int n) {
-		if(n>=1 && n <=9)
+		if (n >= 1 && n <= 9)
 			number = n;
 	}
-	
+
 	public int getNumber() {
 		return number;
 	}
-	
-	public boolean getClickable(){
+
+	public boolean getClickable() {
 		return clickable;
 	}
-	
-	public void setClickable(Boolean b){
+
+	public void setClickable(Boolean b) {
 		clickable = b;
 	}
 
 	public ApproachCircle getApproachCirlce() {
-		// TODO Auto-generated method stub
 		return approachCircle;
 	}
-
 
 }

@@ -11,12 +11,17 @@
 <fullyQualifiedTypeName name="javax.sound.midi.Receiver"/>
 <fullyQualifiedTypeName name="music.Beatmap"/>
 <fullyQualifiedTypeName name="java.awt.Component"/>
-<fullyQualifiedTypeName name="java.awt.Graphics"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="music.Combo"/>
-<fullyQualifiedTypeName name="beats.Beat"/>
 <fullyQualifiedTypeName name="beats.ApproachCircle"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="jay.jaysound.JayLayer"/>
 <fullyQualifiedTypeName name="music.MP3Player"/>
+<fullyQualifiedTypeName name="beats.Masher"/>
+<fullyQualifiedTypeName name="beats.Beat"/>
+<fullyQualifiedTypeName name="java.awt.Graphics"/>
+<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+<fullyQualifiedTypeName name="java.awt.image.ImageObserver"/>
+<fullyQualifiedTypeName name="music.Score"/>
+<fullyQualifiedTypeName name="java.awt.Font"/>
 </qualifiedTypeNameHistroy>

@@ -37,7 +37,7 @@ public class RhythmFrame extends JFrame {
 
 		add(framePanel);
 
-		//setResizable(true);
+		// setResizable(true);
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class RhythmFrame extends JFrame {
 	public void toGame(Beatmap b) {
 		gs.recieveBeatmap(b);
 		b.setGamescreen(gs);
-		
+
 		((CardLayout) framePanel.getLayout()).show(framePanel, "Game");
 		requestFocus();
 		gs.requestFocus();

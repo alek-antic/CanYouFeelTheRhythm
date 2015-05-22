@@ -1,5 +1,12 @@
 package music;
 
+import java.awt.Graphics;
+import java.awt.image.ImageObserver;
+
+import javax.swing.ImageIcon;
+
+import beats.Beat;
+
 public class Score {
 
 	private int total;
@@ -11,9 +18,9 @@ public class Score {
 	}
 
 	/**
-	 * @param int amount The amount to be added to the total. The amount
-	 *        added will be the amount multiplied by the current multiplier
-	 *        
+	 * @param int amount The amount to be added to the total. The amount added
+	 *        will be the amount multiplied by the current multiplier
+	 * 
 	 * @post the total is increased by amount * multiplier
 	 */
 	public void addToScore(int amount) {
@@ -42,6 +49,12 @@ public class Score {
 		multiplier = 0;
 	}
 
-	
-	
+	public int getTotal() {
+		return total;
+	}
+
+	public int getMultiplier() {
+		return multiplier;
+	}
+
 }

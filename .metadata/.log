@@ -10098,3 +10098,147 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.215
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@param'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.219
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@code}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.222
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@return'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.226
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@literal}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.231
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@throws'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.235
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@value}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.237
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@docRoot}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.241
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@since'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.244
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@deprecated'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.247
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@link}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.250
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@see'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.253
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@serialData'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.255
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@inheritDoc}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.258
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@exception'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.260
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@category'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:13:48.264
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@linkplain}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.811
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@since'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.814
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@link}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.816
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@return'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.819
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@literal}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.822
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@docRoot}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.824
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@category'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.827
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@exception'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.829
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@deprecated'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.832
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@see'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.835
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@linkplain}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.837
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@serialData'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.839
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@inheritDoc}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.842
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@param'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.844
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@throws'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.846
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@code}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:16:35.850
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@value}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.679
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@value}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.682
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@see'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.685
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@link}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.690
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@category'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.694
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@code}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.699
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@throws'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.702
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@docRoot}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.707
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@exception'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.710
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@serialData'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.712
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@deprecated'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.714
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@return'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.718
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@param'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.720
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal' ('@since'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.722
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@inheritDoc}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.724
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@linkplain}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-22 00:17:34.728
+!MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@literal}'). Returning original proposal instead.
