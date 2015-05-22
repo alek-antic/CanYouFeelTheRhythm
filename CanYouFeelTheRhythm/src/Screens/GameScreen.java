@@ -54,8 +54,14 @@ public class GameScreen extends JPanel implements ActionListener {
 
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
+<<<<<<< HEAD
 		if (currentBeat != null)
 			currentBeat.draw(g, this);
+=======
+		if(beatToBeDrawn != null)
+		beatToBeDrawn.draw(g, this);
+		
+>>>>>>> origin/mobeats
 	}
 
 	public void actionPerformed(ActionEvent e) {

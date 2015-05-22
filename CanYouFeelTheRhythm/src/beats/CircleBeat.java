@@ -28,7 +28,10 @@ public class CircleBeat extends Beat {
 	 *            the time the circle beat should be clicked
 	 */
 	public CircleBeat(String filename, int x, int y, int r, long time) {
-		super(filename, x, y, r, time);
+		super(filename, x, y, r, time, new ApproachCircle(
+				"lib/Images/approach.png", x, y, r + 50,
+				new Color(72, 196, 224)));
+
 	}
 
 	/**
@@ -48,7 +51,7 @@ public class CircleBeat extends Beat {
 	 *            the color of the circle beat
 	 */
 	public CircleBeat(String filename, int x, int y, int r, long time, Color c) {
-		super(filename, x, y, r, time);
+		this(filename, x, y, r, time);
 		setColor(c);
 	}
 

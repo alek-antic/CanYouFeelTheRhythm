@@ -19,8 +19,12 @@ public abstract class Beat extends MovingImage {
 	private long time;
 	private final long approachRate = 500;
 	private Color c;
+<<<<<<< HEAD
 	private int number;
 	private Boolean clickable;
+=======
+	private ApproachCircle approachCircle;
+>>>>>>> origin/mobeats
 
 	/**
 	 * Creates a new beat
@@ -36,10 +40,14 @@ public abstract class Beat extends MovingImage {
 	 * @param time
 	 *            the time the beat should be pressed
 	 */
-	public Beat(String filename, int x, int y, int r, long time) {
+	public Beat(String filename, int x, int y, int r, long time, ApproachCircle circle) {
 		super(filename, x, y, r, r);
 		this.time = time;
+<<<<<<< HEAD
 		clickable = true;
+=======
+		approachCircle = circle;
+>>>>>>> origin/mobeats
 		//setColor(new Color(72, 196, 224));
 	}
 
@@ -59,8 +67,8 @@ public abstract class Beat extends MovingImage {
 	 * @param c
 	 *            the color of the beat
 	 */
-	public Beat(String filename, int x, int y, int r, long time, Color c) {
-		this(filename, x, y, r, time);
+	public Beat(String filename, int x, int y, int r, long time, ApproachCircle circle, Color c) {
+		this(filename, x, y, r, time, circle);
 		setColor(c);
 		clickable = true;
 	}
@@ -109,6 +117,7 @@ public abstract class Beat extends MovingImage {
 		clickable = true;
 	}
 
+<<<<<<< HEAD
 	public void setNumber(int n) {
 		number = n;
 	}
@@ -120,4 +129,11 @@ public abstract class Beat extends MovingImage {
 	public void setClickable(Boolean b){
 		clickable = b;
 	}
+=======
+	public ApproachCircle getApproachCirlce() {
+		// TODO Auto-generated method stub
+		return approachCircle;
+	}
+
+>>>>>>> origin/mobeats
 }

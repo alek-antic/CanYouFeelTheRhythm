@@ -86,9 +86,13 @@ public class Beatmap implements Runnable {
 					if (b.getTime() - b.getApproach() <= currentTime
 							&& b.getTime() >= currentTime) {
 						gamescreen.recieveBeat(b);
+<<<<<<< HEAD
 						currentBeat = b;
 					} else if (b.getTime() <= currentTime) {
 						gamescreen.recieveBeat(null);
+=======
+						b.getApproachCirlce().act();
+>>>>>>> origin/mobeats
 					}
 				}
 			}

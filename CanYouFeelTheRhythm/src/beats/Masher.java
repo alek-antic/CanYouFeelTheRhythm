@@ -26,8 +26,9 @@ public class Masher extends Beat {
 	 *            the time the Masher should be mashed
 	 */
 	public Masher(String filename, int x, int y, int r, long time) {
-		super(filename, x, y, r, time);
-		// TODO Auto-generated constructor stub
+		super(filename, x, y, r, time, new ApproachCircle("approach.png", x, y, r + 500, new Color(0,0,0)));
 	}
+	
+	
 
 }
