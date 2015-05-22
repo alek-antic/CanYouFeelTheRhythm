@@ -18,8 +18,6 @@ public class Combo {
 	/**
 	 * creates a new combo
 	 * 
-	 * @param color
-	 *            of each beat in the combo
 	 */
 	public Combo(/* Color color */) {
 		beats = new ArrayList<Beat>();

@@ -62,6 +62,7 @@ public class RhythmFrame extends JFrame {
 
 	/**
 	 * Changes the current screen to the GameScreen and sets the beatmap
+	 * @param b the beatmap to give to the GameScreen
 	 */
 	public void toGame(Beatmap b) {
 		gs.recieveBeatmap(b);

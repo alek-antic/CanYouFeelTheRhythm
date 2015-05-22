@@ -58,7 +58,7 @@ public class CircleBeat extends Beat {
 	}
 
 	/**
-	 * @Post ensures that this CircleBeat's has its image at the start of a
+	 * @post ensures that this CircleBeat's has its image at the start of a
 	 *       Beatmap
 	 */
 	public void resetImage() {

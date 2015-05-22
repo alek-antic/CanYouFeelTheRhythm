@@ -40,10 +40,6 @@ Menus - navigation through the game, in order to make use easier
 
 Osu! - game mode #1 - beats scattered across screen at proper timing, react properly to mouseover and key presses
 
-Catch the Beat - game mode #2 - beats fall, with a character running back and forth to catch these beats
-
-Music Flow - game mode #3 - beats move similar to Guitar Hero, and the player uses keys in order to interact with these beats
-
 2 default beatmaps- a minimum of two songs for everyone to play in class, hopefully more
 
 Want to have:
@@ -73,8 +69,6 @@ MainMenuScreen - the main menu
 SongSelectScreen - the screen that you select your song on
 GameScreen - the actual screen for playing the game
 Score - keeps score as the player plays, displays it
-Song - music of the Beatmap
-SoundEffects - the beeps and dings
 Beatmap - contains the combination of beats that make up each game
 Combo - a string of Beats together that assigns them numbers, and 
 ApproachCircle- the circle that closes in around a beat in Chase The Beat to denote the timing
@@ -83,25 +77,11 @@ Beat - the essential component of the game
 	Circle - the most basic beat, which the player just presses X or Z on at the right time
 	Approach circle - slowly fades in around a beat to show the player when to click
 	Masher - a beat where the player just mashes the X and Z keys as much as possible
-	FallingCircle(Catch the beat and Music Flow) - the special beats moving down the screen for catching
-	FallingSlider(Catch the beat and Music Flow) - the special beats that fall down the screen that need to be held
-Catcher (for catch the beat) - the character moving at the bottom of the screen to catch beats
-MiniGame
-	Chase
-	Catch
-	Flow
 
 Responsibility List:
 
 Aleksandar: all Beats and all Beatmap related classes
 Ben:  all Screens, all MiniGames, and Catcher
-
-
-Potential Concerns : 
-1. Perhaps the tutorial should be part of the want to have because it is an important feature of your program that makes it "legit" and also would help the user understand the game w/o looking at the ReadMe
-2. Add the SoundEffects, FallingBeat classes to the UML(unless I didn't see them) because they will help with understanding the class structure
-3. Allow the users to choose the buttons for the game? Minor detail because everything else seems pretty solid but not all users enjoy using certain buttons to play games. 
-4. Will the user be able to upload their own songs to play to? Seems like a great function, but the "information" you require from the song seems like something that the user shouldn't have to input, but I understand that extracting that informatin would be a pain
 
 
 

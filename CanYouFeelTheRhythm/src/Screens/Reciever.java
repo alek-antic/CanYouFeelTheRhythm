@@ -17,8 +17,7 @@ public interface Reciever {
 	 * Provides a reference to
 	 * 
 	 * @param b
-	 *            a beat to be recieved
-	 * @return the beat b
+	 *            a beat to be received
 	 */
 	void recieveBeat(Beat b);
 

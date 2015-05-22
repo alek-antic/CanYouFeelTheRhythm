@@ -38,6 +38,8 @@ public abstract class Beat extends MovingImage {
 	 *            the length of the radius of the beat
 	 * @param time
 	 *            the time the beat should be pressed
+	 * @param circle
+	 * 			  the ApproachCircle for this Beat
 	 */
 	public Beat(String filename, int x, int y, int r, long time,
 			ApproachCircle circle) {
@@ -66,6 +68,8 @@ public abstract class Beat extends MovingImage {
 	 *            the time the beat should be pressed
 	 * @param c
 	 *            the color of the beat
+	 * @param circle
+	 * 			  the ApproachCircle for this Beat
 	 */
 	public Beat(String filename, int x, int y, int r, long time,
 			ApproachCircle circle, Color c) {

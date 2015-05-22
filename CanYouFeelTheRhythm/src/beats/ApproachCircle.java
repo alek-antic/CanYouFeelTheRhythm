@@ -24,10 +24,10 @@ public class ApproachCircle extends MovingImage {
 	 *            the x value of the approach circle
 	 * @param y
 	 *            the y value of the approach circle
-	 * @param w
-	 *            the height of the approach circle
-	 * @param h
-	 *            the width of the approach circle
+	 * @param r
+	 * 			  the radius of the approach circle
+	 * @param c
+	 * 			  the color of the approach circle
 	 */
 	public ApproachCircle(String filename, int x, int y, int r, Color c) {
 		super(filename, x, y, r, r);

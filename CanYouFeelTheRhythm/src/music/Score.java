@@ -18,7 +18,7 @@ public class Score {
 	}
 
 	/**
-	 * @param int amount The amount to be added to the total. The amount added
+	 * @param amount The amount to be added to the total. The amount added
 	 *        will be the amount multiplied by the current multiplier
 	 * 
 	 * @post the total is increased by amount * multiplier

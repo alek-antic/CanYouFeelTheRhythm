@@ -26,6 +26,8 @@ public class Slider extends Beat {
 	 *            the length of the radius of the slider
 	 * @param time
 	 *            the time the slider should be clicked
+	 * @param c
+	 * 			  the color of the slider
 	 */
 	public Slider(String filename, int x, int y, int r, long time, Color c) {
 		super(filename, x, y, r, time, new ApproachCircle("approach.png", x, y,
