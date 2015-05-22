@@ -46,6 +46,7 @@ public class Combo {
 			beats.get(i).setNumber(i);
 		}
 	}
+	
 
 	/*
 	public void setColor(Color c) {

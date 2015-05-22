@@ -112,14 +112,16 @@ public abstract class Beat extends MovingImage {
 	public void deleteImage(){
 		setImage(null);
 	}
-	public void resetImage(){
-		setImage((new ImageIcon("lib/Images/" + "CircleBeat" + "" /*+ number*/ + ".png")).getImage()); 
-		clickable = true;
-	}
+	public abstract void resetImage();
 
 
 	public void setNumber(int n) {
-		number = n;
+		if(n>=1 && n <=9)
+			number = n;
+	}
+	
+	public int getNumber() {
+		return number;
 	}
 	
 	public boolean getClickable(){

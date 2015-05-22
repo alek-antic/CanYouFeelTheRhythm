@@ -46,7 +46,7 @@ public class Beatmap implements Runnable {
 		player.addSoundEffect("click.mp3");
 		currentTime = 0l;
 		k = new KeyHandler();
-
+		score = new Score();
 	}
 
 	/**
@@ -54,6 +54,7 @@ public class Beatmap implements Runnable {
 	 */
 	public void run() {
 		for(Combo c: beatCombos){
+			c.setNumbers();
 			for(Beat b: c.getBeatArray()){
 				b.resetImage();
 			}
@@ -64,13 +65,12 @@ public class Beatmap implements Runnable {
 
 	}
 	
-	
+	/*
 	public void kill() {
 		time.stop();
 		currentTime = 0l;
-		player.
-
 	}
+	*/
 
 	/**
 	 * adds a combo to the beatmap
@@ -99,6 +99,7 @@ public class Beatmap implements Runnable {
 							&& b.getTime() >= currentTime) {
 						gamescreen.recieveBeat(b);
 						currentBeat = b;
+						currentBeat.getApproachCirlce().act();
 					} else if (b.getTime() <= currentTime) {
 						gamescreen.recieveBeat(null);
 						b.getApproachCirlce().act();
@@ -124,8 +125,8 @@ public class Beatmap implements Runnable {
 			double mouseX = p.getX() - p2.getX();
 			double mouseY = p.getY() - p2.getY();
 
-			//if(currentBeat instanceof CircleBeat){
-				if (Math.abs(timePressed - currentBeat.getTime()) <= 500
+			if(currentBeat instanceof CircleBeat){
+				if (Math.abs(timePressed - currentBeat.getTime()) <= 100
 						&& mouseX > currentBeat.getX()
 						&& mouseX < currentBeat.getX() + currentBeat.getWidth()
 						&& mouseY > currentBeat.getX()
@@ -134,9 +135,37 @@ public class Beatmap implements Runnable {
 					gamescreen.deleteCurrent();
 					currentBeat.setClickable(false);
 					player.playSoundEffect(1);
-					
+					score.incrementMultiplier();
+					score.addToScore(300);
+				} else if(Math.abs(timePressed - currentBeat.getTime()) <= 200
+						&& mouseX > currentBeat.getX()
+						&& mouseX < currentBeat.getX() + currentBeat.getWidth()
+						&& mouseY > currentBeat.getX()
+						&& mouseY < currentBeat.getY() + currentBeat.getHeight() && currentBeat.getClickable()
+						&& (e.getKeyCode() == KeyEvent.VK_Z || e.getKeyCode() == KeyEvent.VK_X)) {
+					gamescreen.deleteCurrent();
+					currentBeat.setClickable(false);
+					player.playSoundEffect(1);
+					score.incrementMultiplier();
+					score.addToScore(100);
+				} else if(Math.abs(timePressed - currentBeat.getTime()) <= 300
+						&& mouseX > currentBeat.getX()
+						&& mouseX < currentBeat.getX() + currentBeat.getWidth()
+						&& mouseY > currentBeat.getX()
+						&& mouseY < currentBeat.getY() + currentBeat.getHeight() && currentBeat.getClickable()
+						&& (e.getKeyCode() == KeyEvent.VK_Z || e.getKeyCode() == KeyEvent.VK_X)) {
+					gamescreen.deleteCurrent();
+					currentBeat.setClickable(false);
+					player.playSoundEffect(1);
+					score.incrementMultiplier();
+					score.addToScore(50);
+				} 
+			}  else if(currentBeat instanceof Masher) {
+				if(e.getKeyCode() == KeyEvent.VK_X || e.getKeyCode() == KeyEvent.VK_Z) {
+					score.incrementMultiplier();
+					score.addToScore(100);
 				}
-			//} 
+			}
 		}
 
 		@Override

@@ -50,19 +50,21 @@ public class GameScreen extends JPanel implements ActionListener {
 		quit.addActionListener(this);
 		add(quit, BorderLayout.SOUTH);
 
-		currentBeat = new CircleBeat("lib/Images/circle.png", 0, 0, 0, 0);
+		currentBeat = new CircleBeat("lib/Images/CircleBeat1.png", -500, -500, 0, 0);
 	}
 
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-
-		if (currentBeat != null)
+		if (currentBeat != null){
+			currentBeat.moveToLocation(currentBeat.x * f.getWidth() / 1000.0, currentBeat.y * f.getWidth() / 1000.0);
 			currentBeat.draw(g, this);
+			currentBeat.getApproachCirlce().draw(g,this);
+		}
 	}
 
 	public void actionPerformed(ActionEvent e) {
 		f.toSongSelect();
-		bmap.kill();
+//		bmap.kill();
 	}
 
 	public void recieveBeat(Beat b) {
@@ -72,8 +74,7 @@ public class GameScreen extends JPanel implements ActionListener {
 
 	public void recieveBeatmap(Beatmap b) {
 		bmap = b;
-		t = new Thread(bmap);
-		t.start();
+		new Thread(bmap).start();
 	}
 
 	public void setListeners(KeyListener k) {

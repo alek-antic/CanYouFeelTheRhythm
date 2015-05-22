@@ -31,7 +31,7 @@ public class CircleBeat extends Beat {
 	 */
 	public CircleBeat(String filename, int x, int y, int r, long time) {
 		super(filename, x, y, r, time, new ApproachCircle(
-				"lib/Images/approach.png", x, y, r + 50,
+				"lib/Images/approach.png", x - 250, y - 250, r + 500,
 				new Color(72, 196, 224)));
 
 	}
@@ -57,11 +57,14 @@ public class CircleBeat extends Beat {
 		setColor(c);
 	}
 
-	
-	public void resetImage(){
-		setImage((new ImageIcon("lib/Images/" + "CircleBeat" + number + ".png")).getImage()); 
+	/**
+	 * @Post ensures that this CircleBeat's has its image at the start of a
+	 *       Beatmap
+	 */
+	public void resetImage() {
+		setImage((new ImageIcon("lib/Images/" + "CircleBeat" + "1" + ".png"))
+				.getImage());
 
 	}
 
-	
 }

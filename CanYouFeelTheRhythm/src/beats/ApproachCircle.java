@@ -36,8 +36,10 @@ public class ApproachCircle extends MovingImage {
 	
 	
 	public void act() {
-		height -= 5;
-		width -= 5;
+		x += 0.5;
+		y += 0.5;
+		if(width >= 0)
+			changeRadiusBy(-1);
 	}
 	
 	

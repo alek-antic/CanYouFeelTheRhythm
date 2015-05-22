@@ -2,6 +2,8 @@ package beats;
 
 import java.awt.Color;
 
+import javax.swing.ImageIcon;
+
 /**
  * the slider scored by dragging the mouse along it
  * 
@@ -30,4 +32,12 @@ public class Slider extends Beat {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	@Override
+	public void resetImage() {
+		
+		setImage((new ImageIcon("lib/Images/Slider" + getNumber() + ".png" )).getImage());
+		
+	}
+	
 }

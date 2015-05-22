@@ -87,9 +87,9 @@ public class MovingImage extends Ellipse2D.Double {
 	 * @param amount
 	 *            the amount to reduce the radius by
 	 */
-	public void shrinkRadius(double amount) {
-		super.height -= amount;
-		super.width -= amount;
+	public void changeRadiusBy(double amount) {
+		super.height += amount;
+		super.width += amount;
 	}
 
 	/**
