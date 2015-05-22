@@ -2,6 +2,8 @@ package beats;
 
 import java.awt.Color;
 
+import javax.swing.ImageIcon;
+
 /**
  * beat scored by mashing the keys as much as you can
  * 
@@ -11,6 +13,8 @@ import java.awt.Color;
 
 public class Masher extends Beat {
 
+	private final long approachRate = 3000;
+	
 	/**
 	 * Creates a new Masher
 	 * 
@@ -30,5 +34,14 @@ public class Masher extends Beat {
 	}
 	
 	
+	
+	public void resetImage(){
+		setImage((new ImageIcon("lib/Images/" + "MasherFrame1" + "" /*+ number*/ + ".png")).getImage()); 
+	}
+	
+	public long getApproach() {
+		return approachRate;
+	}
+
 
 }

@@ -2,6 +2,8 @@ package beats;
 
 import java.awt.Color;
 
+import javax.swing.ImageIcon;
+
 /**
  * The basic circular beat scored by clicking on it
  * 
@@ -55,4 +57,11 @@ public class CircleBeat extends Beat {
 		setColor(c);
 	}
 
+	
+	public void resetImage(){
+		setImage((new ImageIcon("lib/Images/" + "CircleBeat" + number + ".png")).getImage()); 
+
+	}
+
+	
 }

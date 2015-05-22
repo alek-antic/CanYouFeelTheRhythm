@@ -10,8 +10,11 @@ import java.util.ArrayList;
 
 import javax.swing.Timer;
 
+import jay.jaysound.JayLayer;
 import Screens.GameScreen;
 import beats.Beat;
+import beats.CircleBeat;
+import beats.Masher;
 
 /**
  * stores all beats to and the song
@@ -20,8 +23,7 @@ import beats.Beat;
  */
 public class Beatmap implements Runnable {
 
-	private Song song;
-	private Song clap;
+	private JayLayer player;
 	private Score score;
 	private ArrayList<Combo> beatCombos;
 	private Timer time;
@@ -39,10 +41,12 @@ public class Beatmap implements Runnable {
 	public Beatmap(String filename) {
 		beatCombos = new ArrayList<Combo>();
 		time = new Timer(1, new TimerHandler());
-		song = new Song(filename);
+		player = new JayLayer("/audio/", "/audio/", true);
+		player.addSoundEffect("chasingtime.mp3");
+		player.addSoundEffect("click.mp3");
 		currentTime = 0l;
 		k = new KeyHandler();
-		clap = new Song("lib/clap.mp3");
+
 	}
 
 	/**
@@ -54,9 +58,17 @@ public class Beatmap implements Runnable {
 				b.resetImage();
 			}
 		}
-		time.start();
-		currentTime = 0;
-		song.play();
+			time.start();
+			currentTime = 0;
+			player.playSoundEffect(0);
+
+	}
+	
+	
+	public void kill() {
+		time.stop();
+		currentTime = 0l;
+		player.
 
 	}
 
@@ -86,13 +98,11 @@ public class Beatmap implements Runnable {
 					if (b.getTime() - b.getApproach() <= currentTime
 							&& b.getTime() >= currentTime) {
 						gamescreen.recieveBeat(b);
-<<<<<<< HEAD
 						currentBeat = b;
 					} else if (b.getTime() <= currentTime) {
 						gamescreen.recieveBeat(null);
-=======
 						b.getApproachCirlce().act();
->>>>>>> origin/mobeats
+
 					}
 				}
 			}
@@ -107,22 +117,26 @@ public class Beatmap implements Runnable {
 
 		@Override
 		public void keyPressed(KeyEvent e) {
+			
 			timePressed = currentTime;
 			Point p = MouseInfo.getPointerInfo().getLocation();
 			Point p2 = gamescreen.getLocationOnScreen();
 			double mouseX = p.getX() - p2.getX();
 			double mouseY = p.getY() - p2.getY();
 
-			if (Math.abs(timePressed - currentBeat.getTime()) <= 500
-					&& mouseX > currentBeat.getX()
-					&& mouseX < currentBeat.getX() + currentBeat.getWidth()
-					&& mouseY > currentBeat.getX()
-					&& mouseY < currentBeat.getY() + currentBeat.getHeight() && currentBeat.getClickable()
-					&& (e.getKeyCode() == KeyEvent.VK_Z || e.getKeyCode() == KeyEvent.VK_X)) {
-				gamescreen.deleteCurrent();
-				currentBeat.setClickable(false);
-				clap.play();
-			}
+			//if(currentBeat instanceof CircleBeat){
+				if (Math.abs(timePressed - currentBeat.getTime()) <= 500
+						&& mouseX > currentBeat.getX()
+						&& mouseX < currentBeat.getX() + currentBeat.getWidth()
+						&& mouseY > currentBeat.getX()
+						&& mouseY < currentBeat.getY() + currentBeat.getHeight() && currentBeat.getClickable()
+						&& (e.getKeyCode() == KeyEvent.VK_Z || e.getKeyCode() == KeyEvent.VK_X)) {
+					gamescreen.deleteCurrent();
+					currentBeat.setClickable(false);
+					player.playSoundEffect(1);
+					
+				}
+			//} 
 		}
 
 		@Override

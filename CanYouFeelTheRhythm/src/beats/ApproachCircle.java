@@ -31,7 +31,7 @@ public class ApproachCircle extends MovingImage {
 	 */
 	public ApproachCircle(String filename, int x, int y, int r, Color c) {
 		super(filename, x, y, r, r);
-		setColor(c);
+		//setColor(c);
 	}
 	
 	

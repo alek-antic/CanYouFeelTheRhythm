@@ -26,7 +26,7 @@ public class Slider extends Beat {
 	 *            the time the slider should be clicked
 	 */
 	public Slider(String filename, int x, int y, int r, long time, Color c) {
-		super(filename, x, y, r, time, c);
+		super(filename, x, y, r, time, new ApproachCircle("approach.png",x,y,r+50,c), c);
 		// TODO Auto-generated constructor stub
 	}
 

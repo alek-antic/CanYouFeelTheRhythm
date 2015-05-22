@@ -17,4 +17,6 @@
 <fullyQualifiedTypeName name="beats.Beat"/>
 <fullyQualifiedTypeName name="beats.ApproachCircle"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="jay.jaysound.JayLayer"/>
+<fullyQualifiedTypeName name="music.MP3Player"/>
 </qualifiedTypeNameHistroy>

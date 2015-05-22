@@ -30,6 +30,7 @@ public class GameScreen extends JPanel implements ActionListener {
 	private JButton quit;
 	private Beatmap bmap;
 	private Beat currentBeat;
+	private Thread t;
 
 	/**
 	 * Creates a new GameScreen on the given frame
@@ -54,18 +55,14 @@ public class GameScreen extends JPanel implements ActionListener {
 
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-<<<<<<< HEAD
+
 		if (currentBeat != null)
 			currentBeat.draw(g, this);
-=======
-		if(beatToBeDrawn != null)
-		beatToBeDrawn.draw(g, this);
-		
->>>>>>> origin/mobeats
 	}
 
 	public void actionPerformed(ActionEvent e) {
 		f.toSongSelect();
+		bmap.kill();
 	}
 
 	public void recieveBeat(Beat b) {
@@ -75,7 +72,8 @@ public class GameScreen extends JPanel implements ActionListener {
 
 	public void recieveBeatmap(Beatmap b) {
 		bmap = b;
-		new Thread(bmap).start();
+		t = new Thread(bmap);
+		t.start();
 	}
 
 	public void setListeners(KeyListener k) {
