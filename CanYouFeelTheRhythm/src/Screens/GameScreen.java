@@ -1,4 +1,4 @@
-package screens;
+package Screens;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -62,8 +62,8 @@ public class GameScreen extends JPanel implements ActionListener {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		if (currentBeat != null) {
-			currentBeat.moveToLocation(currentBeat.x * f.getWidth() / 1000.0,
-					currentBeat.y * f.getWidth() / 1000.0);
+			currentBeat.moveToLocation(currentBeat.x * f.getWidth() / 500.0,
+					currentBeat.y * f.getWidth() / 500.0);
 			currentBeat.draw(g, this);
 			currentBeat.getApproachCirlce().draw(g, this);
 		}
