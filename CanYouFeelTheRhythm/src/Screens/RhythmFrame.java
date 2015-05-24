@@ -1,4 +1,4 @@
-package Screens;
+package screens;
 
 import java.awt.CardLayout;
 
@@ -16,10 +16,11 @@ import music.Beatmap;
  */
 public class RhythmFrame extends JFrame {
 
-	JPanel framePanel;
-	MainMenuScreen mm;
-	SongSelectScreen ss;
-	GameScreen gs;
+	private JPanel framePanel;
+	private MainMenuScreen mm;
+	private SongSelectScreen ss;
+	private GameScreen gs;
+	private SummaryScreen summ;
 
 	public RhythmFrame() {
 		super("Can you feel the rhythm?");
@@ -31,9 +32,11 @@ public class RhythmFrame extends JFrame {
 		mm = new MainMenuScreen(this);
 		ss = new SongSelectScreen(this);
 		gs = new GameScreen(this);
+		summ = new SummaryScreen(this);
 		framePanel.add(mm, "Main");
 		framePanel.add(ss, "SongSelect");
 		framePanel.add(gs, "Game");
+		framePanel.add(summ, "Summary");
 
 		add(framePanel);
 
@@ -71,5 +74,12 @@ public class RhythmFrame extends JFrame {
 		((CardLayout) framePanel.getLayout()).show(framePanel, "Game");
 		requestFocus();
 		gs.requestFocus();
+	}
+	
+	public void toSummaryScreen(Beatmap b) {
+		summ.recieveBeatmap(b);
+		((CardLayout) framePanel.getLayout()).show(framePanel, "Summary");
+		requestFocus();
+		
 	}
 }

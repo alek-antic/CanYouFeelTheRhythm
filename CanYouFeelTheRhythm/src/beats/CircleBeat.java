@@ -13,8 +13,6 @@ import javax.swing.ImageIcon;
 
 public class CircleBeat extends Beat {
 
-	private int number;
-
 	/**
 	 * Creates a new circle beat
 	 * 
@@ -62,7 +60,7 @@ public class CircleBeat extends Beat {
 	 *       Beatmap
 	 */
 	public void resetImage() {
-		setImage((new ImageIcon("lib/Images/" + "CircleBeat" + "1" + ".png"))
+		setImage((new ImageIcon("lib/Images/" + "CircleBeat" + getNumber() + ".png"))
 				.getImage());
 		getApproachCirlce().width = width + 500;
 		getApproachCirlce().height = height + 500;

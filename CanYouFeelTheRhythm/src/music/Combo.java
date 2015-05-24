@@ -43,9 +43,18 @@ public class Combo {
 	 * @post all Beats in this Combo have their number initialized properly
 	 */
 	public void setNumbers() {
-		for (int i = 1; i < beats.size(); i++) {
-			beats.get(i).setNumber(i);
+		for (int i = 0; i < beats.size(); i++) {
+			beats.get(i).setNumber(i+1);
 		}
+	}
+	
+	public long getLatestBeatTime() {
+		long time = 0;
+		for(Beat b : beats) {
+			if(b.getTime()> time)
+				time = b.getTime();
+		}
+		return time;
 	}
 
 	/*
