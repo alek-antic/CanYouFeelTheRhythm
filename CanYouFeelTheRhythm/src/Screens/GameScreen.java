@@ -102,6 +102,7 @@ public class GameScreen extends JPanel implements ActionListener {
 	 *            the beatmap to be played
 	 */
 	public void recieveBeatmap(Beatmap b) {
+		setBackground(Color.yellow);
 		bmap = b;
 		new Thread(bmap).start();
 	}

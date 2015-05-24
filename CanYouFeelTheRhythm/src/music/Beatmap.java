@@ -2,6 +2,7 @@ package music;
 
 import io.github.jgkamat.JayLayer.JayLayer;
 
+import java.awt.Color;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
@@ -121,10 +122,13 @@ public class Beatmap implements Runnable {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			currentTime++;
-			if(currentTime >= length)
-				gamescreen.setBackground(gamescreen.getBackground().darker());
+			if(currentTime >= length){
+				if(currentTime % 75 == 0) {
+					gamescreen.setBackground(gamescreen.getBackground().darker());
+				}
+			}
 			
-			if(currentTime >= length + 1337)
+			if(currentTime >= length + 75*5)
 				end();
 			else {
 				for (Combo c : beatCombos) {
