@@ -47,17 +47,17 @@ public class Slider extends Beat {
 		checkpoints.add(new CircleBeat(filename, x, y, 100,
 				1000));
 		if (x == x2) {
-			for (int i = y; i < y2; i = +10) {
+			for (int i = y; i < y2; i = +100) {
 				Beat check = new CircleBeat(filename, x,
-						y + i, 5, time);
+						i, 5, time);
 				check.removeApproachCircle();
 				checkpoints.add(check);
 			}
 		}
 
 		if (y == y2) {
-			for (int i = x; i < x2; i = +10) {
-				Beat check = new CircleBeat(filename, x + i,
+			for (int i = x; i < x2; i = +100) {
+				Beat check = new CircleBeat(filename, x,
 						y, 5, time);
 				check.removeApproachCircle();
 				checkpoints.add(check);
