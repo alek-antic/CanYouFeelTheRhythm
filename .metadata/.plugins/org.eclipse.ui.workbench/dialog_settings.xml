@@ -8,8 +8,8 @@
 		<item value="true" key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="749" key="dialogHeight"/>
-		<item value="1440" key="dialogWidth"/>
+		<item value="832" key="dialogHeight"/>
+		<item value="1534" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">
@@ -17,6 +17,20 @@
 		<list key="orderedProviders">
 		</list>
 		<list key="textArray">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.internal.dialogs.WorkbenchEditorsDialog">
+		<item value="0" key="sort"/>
+		<item value="false" key="allPersp"/>
+		<list key="columns">
+			<item value="252"/>
+			<item value="504"/>
+		</list>
+		<list key="bounds">
+			<item value="881"/>
+			<item value="332"/>
+			<item value="798"/>
+			<item value="553"/>
 		</list>
 	</section>
 	<section name="ImportExportAction">
