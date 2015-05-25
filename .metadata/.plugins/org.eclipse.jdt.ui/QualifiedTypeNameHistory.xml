@@ -11,7 +11,6 @@
 <fullyQualifiedTypeName name="javax.sound.midi.Receiver"/>
 <fullyQualifiedTypeName name="music.Beatmap"/>
 <fullyQualifiedTypeName name="java.awt.Component"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="music.Combo"/>
 <fullyQualifiedTypeName name="beats.ApproachCircle"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
@@ -24,4 +23,6 @@
 <fullyQualifiedTypeName name="java.awt.image.ImageObserver"/>
 <fullyQualifiedTypeName name="music.Score"/>
 <fullyQualifiedTypeName name="java.awt.Font"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="beats.Slider"/>
 </qualifiedTypeNameHistroy>

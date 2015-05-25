@@ -146,5 +146,9 @@ public abstract class Beat extends MovingImage {
 	public ApproachCircle getApproachCirlce() {
 		return approachCircle;
 	}
+	
+	public void removeApproachCircle() {
+		approachCircle = null;
+	}
 
 }

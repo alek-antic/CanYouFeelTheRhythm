@@ -1,6 +1,9 @@
 package beats;
 
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.image.ImageObserver;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 
@@ -12,6 +15,10 @@ import javax.swing.ImageIcon;
  */
 
 public class Slider extends Beat {
+
+	private int x2;
+	private int y2;
+	private ArrayList<Beat> checkpoints;
 
 	/**
 	 * Creates a new slider
@@ -27,12 +34,36 @@ public class Slider extends Beat {
 	 * @param time
 	 *            the time the slider should be clicked
 	 * @param c
-	 * 			  the color of the slider
+	 *            the color of the slider
 	 */
-	public Slider(String filename, int x, int y, int r, long time, Color c) {
+	public Slider(String filename, int x, int y, int r, long time, Color c,
+			int x2, int y2) {
 		super(filename, x, y, r, time, new ApproachCircle("approach.png", x, y,
 				r + 50, c), c);
-		// TODO Auto-generated constructor stub
+		this.x2 = x2;
+		this.y2 = y2;
+		checkpoints = new ArrayList<Beat>();
+		
+		checkpoints.add(new CircleBeat(filename, x, y, 100,
+				1000));
+		if (x == x2) {
+			for (int i = y; i < y2; i = +10) {
+				Beat check = new CircleBeat(filename, x,
+						y + i, 5, time);
+				check.removeApproachCircle();
+				checkpoints.add(check);
+			}
+		}
+
+		if (y == y2) {
+			for (int i = x; i < x2; i = +10) {
+				Beat check = new CircleBeat(filename, x + i,
+						y, 5, time);
+				check.removeApproachCircle();
+				checkpoints.add(check);
+			}
+		}
+
 	}
 
 	/**
@@ -40,10 +71,13 @@ public class Slider extends Beat {
 	 */
 	@Override
 	public void resetImage() {
-
-		setImage((new ImageIcon("lib/Images/Slider" + getNumber() + ".png"))
-				.getImage());
-
+		for(Beat b : checkpoints)
+			b.resetImage();
 	}
 
+	@Override
+	public void draw(Graphics g, ImageObserver io){
+		for(Beat b : checkpoints)
+			b.draw(g, io);
+	}
 }
