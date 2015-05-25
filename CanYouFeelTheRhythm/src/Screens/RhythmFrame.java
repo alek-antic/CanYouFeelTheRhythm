@@ -24,7 +24,7 @@ public class RhythmFrame extends JFrame {
 
 	public RhythmFrame() {
 		super("Can you feel the rhythm?");
-		setBounds(100, 100, 500, 500);
+		setBounds(100, 100, 1000, 1000);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		framePanel = new JPanel();
 		framePanel.setLayout(new CardLayout());

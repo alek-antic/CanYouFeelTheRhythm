@@ -13,6 +13,7 @@ public class Score {
 	private int multiplier;
 	private int maxScore;
 	private int threeHundreds, oneHundreds, fifties, miss, maxMult;
+	private double life;
 
 	public Score() {
 		total = 0;
@@ -23,6 +24,7 @@ public class Score {
 		fifties = 0;
 		miss = 0;
 		maxMult = 0;
+		life = 100;
 	}
 
 	/**
@@ -35,16 +37,32 @@ public class Score {
 	public void addToScore(int amount) {
 		total += amount * multiplier;
 		addToMax();
-		if (amount == 300)
+		if (amount == 300) {
 			threeHundreds++;
-		else if (amount == 100)
+			if(life < 97)
+				life += 3;
+			else
+				life = 100;
+		}
+		else if (amount == 100) {
 			oneHundreds++;
-		else if (amount == 50)
+			life -= 5;
+		}
+		else if (amount == 50) {
 			fifties++;
-		else if (amount == 0)
+			life -= 10;
+		}
+		else if (amount == 0) {
 			miss++;
+			life -= 20;
+		}
+			
 	}
 
+	public void decrementLife(){
+		life-=0.01;
+	}
+	
 	private void addToMax() {
 		maxScore += 300 * multiplier;
 	}
@@ -108,7 +126,15 @@ public class Score {
 	public int getFifties() {
 		return fifties;
 	}
-
+	
+	public int getMisses() {
+		return miss;
+	}
+	
+	public double getLife() {
+		return life;
+	}
+	
 	public void reset() {
 		total = 0;
 		multiplier = 0;
@@ -118,6 +144,24 @@ public class Score {
 		oneHundreds = 0;
 		fifties = 0;
 		miss = 0;
+		life = 100;
+	}
+	
+	
+	public String calcGrade() {
+		double percent = calcPercentage();
+		
+		if(percent == 100.00)
+			return "SS";
+		if(percent > 98)
+			return "S";
+		if(percent > 90)
+			return "A";
+		if(percent > 82)
+			return "B";
+		if(percent > 75)
+			return "C";
+		return "D";
 	}
 
 }

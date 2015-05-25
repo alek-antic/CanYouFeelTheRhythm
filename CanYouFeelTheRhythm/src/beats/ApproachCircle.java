@@ -14,7 +14,9 @@ import java.awt.image.WritableRaster;
 public class ApproachCircle extends MovingImage {
 
 	private Color c;
-
+	private int initR;
+	private int initX, initY;
+	
 	/**
 	 * Creates a new approach circle
 	 * 
@@ -31,6 +33,9 @@ public class ApproachCircle extends MovingImage {
 	 */
 	public ApproachCircle(String filename, int x, int y, int r, Color c) {
 		super(filename, x, y, r, r);
+		initR = r;
+		initX = x;
+		initY = y;
 		// setColor(c);
 	}
 
@@ -75,4 +80,11 @@ public class ApproachCircle extends MovingImage {
 		return image;
 	}
 
+	public void resetSize() {
+		super.width = initR;
+		super.height = initR;
+		super.x = initX;
+		super.y = initY;
+	}
+	
 }

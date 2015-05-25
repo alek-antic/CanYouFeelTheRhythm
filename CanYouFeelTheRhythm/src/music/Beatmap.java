@@ -123,12 +123,19 @@ public class Beatmap implements Runnable {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			if(score.getLife() == 0)
+				kill();
 			currentTime++;
 			if (currentTime >= length) {
 				if (currentTime % 75 == 0) {
 					gamescreen.setBackground(gamescreen.getBackground()
 							.darker());
 				}
+			}
+			
+			if(currentTime % 5 ==0){
+				score.decrementLife();
+				gamescreen.repaint();
 			}
 
 			if (currentTime >= length + 75 * 5)

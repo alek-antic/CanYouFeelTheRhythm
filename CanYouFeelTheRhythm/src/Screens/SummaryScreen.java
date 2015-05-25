@@ -59,10 +59,23 @@ public class SummaryScreen extends JPanel implements ActionListener {
 		g.setColor(new Color(220, 38, 236));
 		g.drawImage(fifty, 0, 200, 150, 100, this);
 		g.drawString(": x" + s.getFifties(), 150, 267);
+		
+		g.setColor(new Color(147,11,11));
+		g.drawString("Miss: x" + s.getMisses(), 25, 367);
 
 		g.setColor(new Color(77, 167, 181));
-		g.drawString("Max Combo: " + s.getMaxMult(), 25, 367);
+		g.drawString("Max Combo: " + s.getMaxMult(), 25, 467);
+		
+		g.setColor(new Color(128,128,128));
+		g.drawString(s.getTotal() + "", 550, 75);
+		
+		g.setColor(new Color(128,0,128));
+		g.drawString(s.calcPercentage() + "%", 550, 467);
 
+		
+		String grade = s.calcGrade();
+		g.drawImage((new ImageIcon("lib/Images/" + grade+".png")).getImage(), 550,70, this);
+		
 	}
 
 	public void recieveBeatmap(Beatmap b) {
