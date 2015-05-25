@@ -60,11 +60,10 @@ public class CircleBeat extends Beat {
 	 *       Beatmap
 	 */
 	public void resetImage() {
-		setImage((new ImageIcon("lib/Images/" + "CircleBeat" + getNumber() + ".png"))
-				.getImage());
+		setImage((new ImageIcon("lib/Images/" + "CircleBeat" + getNumber()
+				+ ".png")).getImage());
 		getApproachCirlce().width = width + 500;
 		getApproachCirlce().height = height + 500;
-
 	}
 
 }

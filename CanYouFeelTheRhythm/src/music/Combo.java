@@ -44,14 +44,14 @@ public class Combo {
 	 */
 	public void setNumbers() {
 		for (int i = 0; i < beats.size(); i++) {
-			beats.get(i).setNumber(i+1);
+			beats.get(i).setNumber(i + 1);
 		}
 	}
-	
+
 	public long getLatestBeatTime() {
 		long time = 0;
-		for(Beat b : beats) {
-			if(b.getTime()> time)
+		for (Beat b : beats) {
+			if (b.getTime() > time)
 				time = b.getTime();
 		}
 		return time;

@@ -64,7 +64,6 @@ public class GameScreen extends JPanel implements ActionListener {
 		if (currentBeat != null) {
 			currentBeat.moveToLocation(currentBeat.x * f.getWidth() / 500.0,
 					currentBeat.y * f.getWidth() / 500.0);
-			//currentBeat.getApproachCirlce().moveToLocation(currentBeat.x, currentBeat.y);
 			currentBeat.draw(g, this);
 			currentBeat.getApproachCirlce().draw(g, this);
 		}
@@ -72,7 +71,7 @@ public class GameScreen extends JPanel implements ActionListener {
 		g.setFont(new Font("Monospaced", Font.BOLD, 36));
 		g.drawString("x" + score.getMultiplier(), 50, getHeight() - 50);
 		g.drawString("" + score.getTotal(), getWidth() - 100, 50);
-		g.drawString("" +  score.calcPercentage() + "%", getWidth() - 150, 100);
+		g.drawString("" + score.calcPercentage() + "%", getWidth() - 150, 100);
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -118,14 +117,14 @@ public class GameScreen extends JPanel implements ActionListener {
 		currentBeat.setImage(null);
 		repaint();
 	}
-	
+
 	/**
 	 * @post changes the screen to the summary screen, with the current Beatmap
 	 */
 	public void goToSummaryScreen() {
 		f.toSummaryScreen(bmap);
 	}
-	
+
 	/**
 	 * @post changes the screen to the song select screen
 	 */
