@@ -85,7 +85,7 @@ public class Beatmap implements Runnable {
 		time.stop();
 		currentTime = 0l;
 		player.killSoundEffect(playing);
-		gamescreen.goToSongSelect();
+		gamescreen.goToFailureScreen();
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class Beatmap implements Runnable {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			if(score.getLife() == 0)
+			if(score.getLife() <= 0)
 				kill();
 			currentTime++;
 			if (currentTime >= length) {
@@ -133,7 +133,7 @@ public class Beatmap implements Runnable {
 				}
 			}
 			
-			if(currentTime % 5 ==0){
+			if(currentTime % 3 == 0){
 				score.decrementLife();
 				gamescreen.repaint();
 			}

@@ -66,14 +66,8 @@ public class GameScreen extends JPanel implements ActionListener {
 			currentBeat.moveToLocation(currentBeat.x * f.getWidth() / 1000.0,
 					currentBeat.y * f.getWidth() / 1000.0);
 			currentBeat.draw(g, this);
-			currentBeat.moveToLocation(currentBeat.x * f.getWidth() / 500.0,
-					currentBeat.y * f.getWidth() / 500.0);
-			if(currentBeat instanceof Slider){
-				Slider currentSlider = (Slider) currentBeat;
-				currentSlider.draw(g, this);
-			}else{
-				currentBeat.draw(g, this);
-			}
+			currentBeat.draw(g, this);
+
 			currentBeat.getApproachCirlce().draw(g, this);
 		}
 
@@ -143,5 +137,12 @@ public class GameScreen extends JPanel implements ActionListener {
 	 */
 	public void goToSongSelect() {
 		f.toSongSelect();
+	}
+	
+	/**
+	 * @post changes the screen to the failure screen
+	 */
+	public void goToFailureScreen() {
+		f.toFailureScreen(bmap);
 	}
 }

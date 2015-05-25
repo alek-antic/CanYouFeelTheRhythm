@@ -21,6 +21,7 @@ public class RhythmFrame extends JFrame {
 	private SongSelectScreen ss;
 	private GameScreen gs;
 	private SummaryScreen summ;
+	private FailureScreen fs;
 
 	public RhythmFrame() {
 		super("Can you feel the rhythm?");
@@ -33,12 +34,15 @@ public class RhythmFrame extends JFrame {
 		ss = new SongSelectScreen(this);
 		gs = new GameScreen(this);
 		summ = new SummaryScreen(this);
+		fs = new FailureScreen(this);
 		framePanel.add(mm, "Main");
 		framePanel.add(ss, "SongSelect");
 		framePanel.add(gs, "Game");
 		framePanel.add(summ, "Summary");
+		framePanel.add(fs, "Fail");
 
 		add(framePanel);
+		requestFocus();
 
 		// setResizable(true);
 	}
@@ -80,6 +84,11 @@ public class RhythmFrame extends JFrame {
 		summ.recieveBeatmap(b);
 		((CardLayout) framePanel.getLayout()).show(framePanel, "Summary");
 		requestFocus();
-		
+	}
+	
+	public void toFailureScreen(Beatmap b) {
+		fs.setBeatmap(b);
+		((CardLayout) framePanel.getLayout()).show(framePanel, "Fail");
+		requestFocus();
 	}
 }
