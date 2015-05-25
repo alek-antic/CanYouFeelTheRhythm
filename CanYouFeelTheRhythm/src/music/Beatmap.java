@@ -151,7 +151,6 @@ public class Beatmap implements Runnable {
 							}
 							gamescreen.recieveBeat(null);
 							b.getApproachCirlce().act();
-
 						}
 					}
 				}
@@ -175,7 +174,7 @@ public class Beatmap implements Runnable {
 
 			if (!pressedDown) {
 				if (currentBeat instanceof CircleBeat) {
-					if (Math.abs(timePressed - currentBeat.getTime()) <= 100
+					if (Math.abs(timePressed - currentBeat.getTime()) <= 50
 							&& mouseX > currentBeat.getX()
 							&& mouseX < currentBeat.getX()
 									+ currentBeat.getWidth()
@@ -192,7 +191,7 @@ public class Beatmap implements Runnable {
 						player.playSoundEffect(1);
 						score.incrementMultiplier();
 						score.addToScore(300);
-					} else if (Math.abs(timePressed - currentBeat.getTime()) <= 200
+					} else if (Math.abs(timePressed - currentBeat.getTime()) <= 100
 							&& mouseX > currentBeat.getX()
 							&& mouseX < currentBeat.getX()
 									+ currentBeat.getWidth()
@@ -209,7 +208,7 @@ public class Beatmap implements Runnable {
 						player.playSoundEffect(1);
 						score.incrementMultiplier();
 						score.addToScore(100);
-					} else if (Math.abs(timePressed - currentBeat.getTime()) <= 300
+					} else if (Math.abs(timePressed - currentBeat.getTime()) <= 150
 							&& mouseX > currentBeat.getX()
 							&& mouseX < currentBeat.getX()
 									+ currentBeat.getWidth()
@@ -254,8 +253,6 @@ public class Beatmap implements Runnable {
 
 		@Override
 		public void keyTyped(KeyEvent arg0) {
-			// TODO Auto-generated method stub
-
 		}
 
 	}
