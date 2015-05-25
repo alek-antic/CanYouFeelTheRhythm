@@ -18,6 +18,7 @@ import music.Beatmap;
 import music.Score;
 import beats.Beat;
 import beats.CircleBeat;
+import beats.Slider;
 
 /**
  * The Screen on which CanYouFeelTheRhythm is played
@@ -62,9 +63,20 @@ public class GameScreen extends JPanel implements ActionListener {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		if (currentBeat != null) {
+<<<<<<< HEAD
 			currentBeat.moveToLocation(currentBeat.x * f.getWidth() / 1000.0,
 					currentBeat.y * f.getWidth() / 1000.0);
 			currentBeat.draw(g, this);
+=======
+			currentBeat.moveToLocation(currentBeat.x * f.getWidth() / 500.0,
+					currentBeat.y * f.getWidth() / 500.0);
+			if(currentBeat instanceof Slider){
+				Slider currentSlider = (Slider) currentBeat;
+				currentSlider.draw(g, this);
+			}else{
+				currentBeat.draw(g, this);
+			}
+>>>>>>> origin/master
 			currentBeat.getApproachCirlce().draw(g, this);
 		}
 

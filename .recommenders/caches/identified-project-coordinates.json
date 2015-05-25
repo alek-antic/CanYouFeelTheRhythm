@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [[{"location":"C:\\Users\\Alek\\Documents\\CanYouFeelTheRhythm\\CanYouFeelTheRhythm","type":"PROJECT","hints":{"PROJECT_NAME":"CanYouFeelTheRhythm"}},"ABSENT"],[{"location":"C:\\Program Files (x86)\\Java\\jre1.8.0_45","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.7"}},"jre:jre:1.7.0"]]
+=======
+[[{"location":"/home/ben/CanYouFeelTheRhythm/CanYouFeelTheRhythm","type":"PROJECT","hints":{"PROJECT_NAME":"CanYouFeelTheRhythm"}},"ABSENT"],[{"location":"/usr/lib/jvm/java-7-openjdk-amd64","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.7"}},"jre:jre:1.7.0"]]
+>>>>>>> origin/master

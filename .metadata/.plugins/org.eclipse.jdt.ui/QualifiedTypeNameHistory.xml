@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="java.awt.image.WritableRaster"/>
 <fullyQualifiedTypeName name="javax.sound.midi.Receiver"/>
 <fullyQualifiedTypeName name="java.awt.Component"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="music.Combo"/>
 <fullyQualifiedTypeName name="beats.ApproachCircle"/>
 <fullyQualifiedTypeName name="jay.jaysound.JayLayer"/>
@@ -26,8 +25,13 @@
 <fullyQualifiedTypeName name="java.awt.Image"/>
 <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
 <fullyQualifiedTypeName name="java.awt.Font"/>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="screens.SummaryScreen"/>
 <fullyQualifiedTypeName name="javax.swing.JButton"/>
 <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
+=======
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="beats.Slider"/>
+>>>>>>> origin/master
 </qualifiedTypeNameHistroy>

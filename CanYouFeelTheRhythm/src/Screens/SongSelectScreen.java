@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import beats.Beat;
 import beats.CircleBeat;
 import beats.Masher;
+import beats.Slider;
 import music.Beatmap;
 import music.Combo;
 
@@ -45,7 +46,7 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 
 		b = new Beatmap("lib/chasingtime.mp3");
 		Combo testCombo = new Combo();
-		Beat testBeat = new CircleBeat("lib/Images/CircleBeat1.png", 100, 100,
+		/*Beat testBeat = new CircleBeat("lib/Images/CircleBeat1.png", 100, 100,
 				100, 1000);
 		Beat testBeat2 = new CircleBeat("lib/Images/CircleBeat2.png", 200, 200,
 				100, 2000);
@@ -57,6 +58,9 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 		testCombo.addBeat(testBeat2);
 		testCombo.addBeat(testBeat3);
 		// testCombo.addBeat(testMash);
+		 */
+		Slider testSlider = new Slider("lib/Images/CircleBeat.png", 100, 100, 100, 1000, Color.red, 300, 100);
+		testCombo.addBeat(testSlider);
 		b.addCombo(testCombo);
 
 		JLabel ssLabel = new JLabel("Select Your Song");
