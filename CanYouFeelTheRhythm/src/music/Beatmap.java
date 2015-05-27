@@ -14,7 +14,7 @@ import java.util.UUID;
 
 import javax.swing.Timer;
 
-import Screens.GameScreen;
+import screens.GameScreen;
 import beats.Beat;
 import beats.CircleBeat;
 import beats.Masher;
@@ -36,6 +36,7 @@ public class Beatmap implements Runnable {
 	private KeyListener k;
 	private UUID playing;
 	private long length;
+	private String filename;
 
 	/**
 	 * creates a new beatmap
@@ -44,6 +45,7 @@ public class Beatmap implements Runnable {
 	 *            the filename of the song to be in the beatmap
 	 */
 	public Beatmap(String filename) {
+		this.filename = filename;
 		beatCombos = new ArrayList<Combo>();
 		currentBeats = new ArrayList<Beat>();
 		time = new Timer(1, new TimerHandler());
@@ -279,5 +281,4 @@ public class Beatmap implements Runnable {
 		}
 
 	}
-
 }

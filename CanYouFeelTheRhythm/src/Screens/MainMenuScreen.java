@@ -1,4 +1,4 @@
-package Screens;
+package screens;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -56,8 +56,8 @@ public class MainMenuScreen extends JPanel implements ActionListener {
 		quit.setContentAreaFilled(false);
 		
 		add(title, BorderLayout.NORTH);
-		add(toSS, BorderLayout.WEST);
-		add(quit, BorderLayout.EAST);
+		add(toSS, BorderLayout.EAST);
+		add(quit, BorderLayout.WEST);
 	}
 
 	@Override

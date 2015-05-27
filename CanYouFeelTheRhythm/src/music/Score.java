@@ -40,13 +40,13 @@ public class Score {
 		if (amount == 300) {
 			threeHundreds++;
 			if(life < 97)
-				life += 3;
+				life += 5;
 			else
 				life = 100;
 		}
 		else if (amount == 100) {
 			oneHundreds++;
-			life -= 5;
+			life += 3;
 		}
 		else if (amount == 50) {
 			fifties++;

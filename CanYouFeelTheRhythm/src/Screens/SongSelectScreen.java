@@ -1,4 +1,4 @@
-package Screens;
+package screens;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -72,6 +72,10 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 		Beat nineteen = new CircleBeat("", 500, 500, 100, 6446);
 		Beat twenty = new CircleBeat("", 250, 750, 100, 6983);
 		Beat twentyone = new CircleBeat("" , 700, 300, 100,7329);
+		Beat twentytwo = new CircleBeat("", 500, 650, 100, 7497);
+		Beat twentythree = new CircleBeat("" , 300, 200, 100, 7840);
+		Beat twentyfour = new CircleBeat("" ,  725, 800, 100, 8323);
+		Beat twentyfive = new CircleBeat("", 725, 700, 100, 8662);
 		
 		comboOne.addBeat(one);
 		comboOne.addBeat(two);
@@ -93,6 +97,11 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 		comboOne.addBeat(eighteen);
 		comboOne.addBeat(nineteen);
 		comboOne.addBeat(twenty);
+		comboOne.addBeat(twentyone);
+		comboOne.addBeat(twentytwo);
+		comboOne.addBeat(twentythree);
+		comboOne.addBeat(twentyfour);
+		comboOne.addBeat(twentyfive);
 		
 		Combo comboTwo = new Combo();
 		
@@ -106,25 +115,25 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 		b2 = new Beatmap("metronome.mp3");
 		
 		Combo combo = new Combo();
-		Beat ichi = new CircleBeat("", 100, 100, 100, 100);
-		Beat ni = new CircleBeat("", 200, 200, 100, 200);
-		Beat san = new CircleBeat("", 300, 300, 100, 300);
-		Beat yon = new CircleBeat("", 400, 400, 100, 400);
-		Beat go = new CircleBeat("", 500, 500, 100, 500);
-		Beat roku = new CircleBeat("", 600, 600,100, 600);
-		Beat nana = new CircleBeat("", 700, 700, 100, 800);
-		Beat hachi = new CircleBeat("", 800, 800, 100, 900);
+		Beat ichi = new CircleBeat("", 500, 500, 100, 500);
+		Beat ni = new CircleBeat("", 600, 600, 100, 600);
+		Beat san = new CircleBeat("", 700, 700, 100, 700);
+		Beat yon = new CircleBeat("", 800, 800, 100, 800);
+		Beat go = new CircleBeat("", 800, 600, 100, 900);
+		Beat roku = new CircleBeat("", 800, 400, 100, 1000);
+		Beat nana = new CircleBeat("", 500, 300, 100, 1100);
+		Beat hachi = new CircleBeat("", 400, 100, 100, 1200);
 		//Beat jyuu = new CircleBeat("", 900, 900, 100, 3738);
 		//Beat kyuu = new CircleBeat("", 190, 130, 100, 4000);
 		
-		comboOne.addBeat(ichi);
-		comboOne.addBeat(ni);
-		comboOne.addBeat(san);
-		comboOne.addBeat(yon);
-		comboOne.addBeat(go);
-		comboOne.addBeat(roku);
-		comboOne.addBeat(nana);
-		comboOne.addBeat(hachi);
+		combo.addBeat(ichi);
+		combo.addBeat(ni);
+		combo.addBeat(san);
+		combo.addBeat(yon);
+		combo.addBeat(go);
+		combo.addBeat(roku);
+		combo.addBeat(nana);
+		combo.addBeat(hachi);
 		
 		b2.addCombo(combo);
 		

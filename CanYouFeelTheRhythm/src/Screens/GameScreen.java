@@ -1,4 +1,4 @@
-package Screens;
+package screens;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -85,11 +85,17 @@ public class GameScreen extends JPanel implements ActionListener {
 		g.fillRect(0, 0, (int) (600 * score.getLife() / 100.0), 25);
 
 	}
+	
+	private void reset() {
+		t = null;
+		bmap = new Beatmap("");
+		currentBeats = new ArrayList<Beat>();
+		score = new Score();
+	}
 
 	public void actionPerformed(ActionEvent e) {
 		f.toSongSelect();
 		bmap.kill();
-		t.destroy();
 	}
 
 	public void setScore(Score score) {
@@ -114,6 +120,7 @@ public class GameScreen extends JPanel implements ActionListener {
 	 *            the beatmap to be played
 	 */
 	public void recieveBeatmap(Beatmap b) {
+		reset();
 		setBackground(Color.yellow);
 		bmap = b;
 		t = new Thread(bmap);
