@@ -7,6 +7,11 @@ import javax.swing.ImageIcon;
 
 import beats.Beat;
 
+/**
+ * Represents the score of a beatmap
+ * @author Alek
+ *
+ */
 public class Score {
 
 	private int total;
@@ -15,6 +20,9 @@ public class Score {
 	private int threeHundreds, oneHundreds, fifties, miss, maxMult;
 	private double life;
 
+	/**
+	 * creates a new score with default values
+	 */
 	public Score() {
 		total = 0;
 		multiplier = 0;
@@ -59,6 +67,9 @@ public class Score {
 			
 	}
 
+	/**
+	 * @post decreases the life of the player
+	 */
 	public void decrementLife(){
 		life-=0.01;
 	}
@@ -135,6 +146,9 @@ public class Score {
 		return life;
 	}
 	
+	/**
+	 * @post resets the score to its default values
+	 */
 	public void reset() {
 		total = 0;
 		multiplier = 0;
@@ -147,7 +161,10 @@ public class Score {
 		life = 100;
 	}
 	
-	
+	/**
+	 * 
+	 * @return the grade the player received.
+	 */
 	public String calcGrade() {
 		double percent = calcPercentage();
 		

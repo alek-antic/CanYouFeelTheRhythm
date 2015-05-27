@@ -147,6 +147,10 @@ public abstract class Beat extends MovingImage {
 		return approachCircle;
 	}
 	
+	
+	/**
+	 * @post removes the instance's ApproachCircle image
+	 */
 	public void removeApproachCircle() {
 		approachCircle = null;
 	}

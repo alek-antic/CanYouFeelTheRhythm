@@ -80,6 +80,9 @@ public class ApproachCircle extends MovingImage {
 		return image;
 	}
 
+	/**
+	 * @post resets the instance to the original size and position
+	 */
 	public void resetSize() {
 		super.width = initR;
 		super.height = initR;

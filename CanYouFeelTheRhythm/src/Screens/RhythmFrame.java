@@ -80,12 +80,22 @@ public class RhythmFrame extends JFrame {
 		gs.requestFocus();
 	}
 	
+	/**
+	 * 
+	 * @param b the beatmap to pass to the summary screen
+	 * @post switches to the SummaryScreen card
+	 */
 	public void toSummaryScreen(Beatmap b) {
 		summ.recieveBeatmap(b);
 		((CardLayout) framePanel.getLayout()).show(framePanel, "Summary");
 		requestFocus();
 	}
-	
+
+	/**
+	 * 
+	 * @param b the beatmap to pass to the summary screen
+	 * @post switches to the FailureScreen card
+	 */
 	public void toFailureScreen(Beatmap b) {
 		fs.setBeatmap(b);
 		((CardLayout) framePanel.getLayout()).show(framePanel, "Fail");

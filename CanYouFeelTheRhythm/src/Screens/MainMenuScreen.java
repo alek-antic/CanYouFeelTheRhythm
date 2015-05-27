@@ -68,6 +68,9 @@ public class MainMenuScreen extends JPanel implements ActionListener {
 			System.exit(0);
 	}
 	
+	/**
+	 * @post draws the the images on the main menu
+	 */
 	public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Image centerPic =  (new ImageIcon("lib/Images/MainBG.png")).getImage();

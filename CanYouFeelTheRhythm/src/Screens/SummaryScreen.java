@@ -15,6 +15,11 @@ import javax.swing.JPanel;
 import music.Beatmap;
 import music.Score;
 
+/**
+ * The class to represent the summary screen of the player's performance after a beatmap
+ * @author Alek
+ *
+ */
 public class SummaryScreen extends JPanel implements ActionListener {
 
 	private RhythmFrame f;
@@ -22,6 +27,10 @@ public class SummaryScreen extends JPanel implements ActionListener {
 	private Score s;
 	private JButton button;
 
+	/**
+	 * Creates a new instance of a SummaryScreen
+	 * @param frame The frame to put this SummmaryScreen on
+	 */
 	public SummaryScreen(RhythmFrame frame) {
 		super();
 
@@ -36,6 +45,9 @@ public class SummaryScreen extends JPanel implements ActionListener {
 		add(button, BorderLayout.SOUTH);
 	}
 
+	/**
+	 * @post draws the summary screen
+	 */
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 
@@ -78,6 +90,10 @@ public class SummaryScreen extends JPanel implements ActionListener {
 		
 	}
 
+	/**
+	 * 
+	 * @param b the beatmap to be received
+	 */
 	public void recieveBeatmap(Beatmap b) {
 		this.b = b;
 		s = b.getScore();

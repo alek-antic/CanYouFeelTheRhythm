@@ -16,6 +16,11 @@ import javax.swing.JPanel;
 
 import music.Beatmap;
 
+/**
+ * Represents the screen that shows up when the player fails a beatmap
+ * @author Alek
+ *
+ */
 public class FailureScreen extends JPanel implements ActionListener, KeyListener{
 
 	
@@ -23,7 +28,11 @@ public class FailureScreen extends JPanel implements ActionListener, KeyListener
 	private RhythmFrame f;
 	private Beatmap b;
 	
-	
+	/**
+	 * Creates a new FaliureScreen on the given frame
+	 * 
+	 * @param frame the frame that this screen is constructed around
+	 */
 	public FailureScreen(RhythmFrame frame) {
 		back = new JButton("Back to Song Select");
 		f = frame;

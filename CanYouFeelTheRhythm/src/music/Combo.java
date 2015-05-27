@@ -48,6 +48,10 @@ public class Combo {
 		}
 	}
 
+	/**
+	 * 
+	 * @return gets the beat with the largest time
+	 */
 	public long getLatestBeatTime() {
 		long time = 0;
 		for (Beat b : beats) {

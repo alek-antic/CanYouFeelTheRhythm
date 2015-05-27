@@ -54,6 +54,8 @@ include things like “No Fail,” “Easy,” “Hidden,” “Double Time,” “Flashlight,” an
 Class List:
 CanYouFeelTheRhythm - the main class
 RhythmFrame - the JFrame to hold everything
+FailureScreen - the screen the pops up when a beatmap is failed
+SummaryScreen - the screen that comes up after a beatmap is successfully completed
 Receiver - An interface to help control GameScreen
 MainMenuScreen - the main menu
 SongSelectScreen - the screen that you select your song on
@@ -65,8 +67,8 @@ ApproachCircle- the circle that closes in around a beat in Chase The Beat to den
 Beat - the essential component of the game
 	Slider - beats you must drag your mouse along
 	Circle - the most basic beat, which the player just presses X or Z on at the right time
-	Approach circle - slowly fades in around a beat to show the player when to click
 	Masher - a beat where the player just mashes the X and Z keys as much as possible
+
 
 Responsibility List:
 
