@@ -159,7 +159,7 @@ public class Score {
 			return "A";
 		if(percent > 82)
 			return "B";
-		if(percent > 75)
+		if(percent > 70)
 			return "C";
 		return "D";
 	}

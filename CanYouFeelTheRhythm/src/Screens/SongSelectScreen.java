@@ -55,7 +55,18 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 		Beat seven = new CircleBeat("", 130, 130, 100, 3198);
 		Beat eight = new CircleBeat("", 130, 170, 100, 3370);
 		Beat nine = new CircleBeat("", 130, 130, 100, 3738);
-		Beat ten = new CircleBeat("", 190,130, 100, 4000);
+		Beat ten = new CircleBeat("", 190,130, 100, 4225);
+		Beat eleven = new CircleBeat("" , 130, 131, 100, 4561);
+		Beat twelve = new CircleBeat("", 100, 100, 100, 4746);
+		Beat thirteen = new CircleBeat("" , 150, 170, 100, 5112);
+		Beat fourteen = new CircleBeat("",200,200,100,5434);
+		Beat fifteen = new CircleBeat("",210,210,100, 5591);
+		Beat sixteen = new CircleBeat("", 560, 570, 100, 5755);
+		Beat seventeen = new CircleBeat("", 400, 700, 100, 5912);
+		Beat eighteen = new CircleBeat("", 700, 400, 100,6294);
+		Beat nineteen = new CircleBeat("", 500, 500, 100, 6446);
+		Beat twenty = new CircleBeat("", 250, 750, 100, 6983);
+		Beat twentyone = new CircleBeat("" , 700, 300, 100,7329);
 		
 		comboOne.addBeat(one);
 		comboOne.addBeat(two);
@@ -67,6 +78,16 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 		comboOne.addBeat(eight);
 		comboOne.addBeat(nine);
 		comboOne.addBeat(ten);
+		comboOne.addBeat(eleven);
+		comboOne.addBeat(twelve);
+		comboOne.addBeat(thirteen);
+		comboOne.addBeat(fourteen);
+		comboOne.addBeat(fifteen);
+		comboOne.addBeat(sixteen);
+		comboOne.addBeat(seventeen);
+		comboOne.addBeat(eighteen);
+		comboOne.addBeat(nineteen);
+		comboOne.addBeat(twenty);
 		
 		Combo comboTwo = new Combo();
 		
