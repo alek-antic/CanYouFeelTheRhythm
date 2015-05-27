@@ -1,5 +1,6 @@
-package screens;
+package Screens;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,7 +9,9 @@ import java.awt.event.KeyListener;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import music.Beatmap;
@@ -22,30 +25,18 @@ public class FailureScreen extends JPanel implements ActionListener, KeyListener
 	
 	
 	public FailureScreen(RhythmFrame frame) {
-		retry = new JButton("Retry");
-		back = new JButton("Back to Menu");
+		back = new JButton("Back to Song Select");
 		f = frame;
-		
-		retry.addActionListener(this);
+		setLayout(new BorderLayout());
 		back.addActionListener(this);
 		addKeyListener(this);
 		
+		ImageIcon titlePic = new ImageIcon("lib/Images/LoseText.png");
+		JLabel lose = new JLabel(titlePic);
 		
-		BoxLayout boxes = new BoxLayout(this, BoxLayout.X_AXIS);		
-		setLayout(boxes);
+		add(lose, BorderLayout.CENTER);
+		add(back, BorderLayout.SOUTH);
 		
-		add(Box.createHorizontalStrut(300));
-		
-		Box box = Box.createVerticalBox();
-		
-		box.add(Box.createVerticalStrut(400));
-		box.add(retry);
-		box.add(Box.createVerticalStrut(100));
-		box.add(back);
-		
-		add(box);
-		
-		add(Box.createHorizontalStrut(300));
 		
 		setBackground(new Color(159,13,13));
 	}
