@@ -1,4 +1,4 @@
-package screens;
+package Screens;
 
 import java.awt.CardLayout;
 

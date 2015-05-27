@@ -1,10 +1,14 @@
-package screens;
+package Screens;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.ImageObserver;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -19,6 +23,8 @@ import javax.swing.JLabel;
 public class MainMenuScreen extends JPanel implements ActionListener {
 
 	private RhythmFrame f;
+	private JButton toSS;
+	private JButton quit;
 
 	/**
 	 * Constructs a MainMenuScreen on the given frame
@@ -31,22 +37,41 @@ public class MainMenuScreen extends JPanel implements ActionListener {
 
 		f = frame;
 
-		setBackground(Color.ORANGE);
+		
+		
+		setBackground(Color.yellow);
 		setLayout(new BorderLayout());
 
-		JPanel title = new JPanel();
-		JLabel mmLabel = new JLabel("Can You Feel the Rhythm?");
-		title.add(mmLabel);
-		title.setBackground(Color.ORANGE);
-		add(title, BorderLayout.CENTER);
-
-		JButton toSS = new JButton("Select Song");
+		ImageIcon titlePic = new ImageIcon("lib/Images/TitleText.png");
+		JLabel title = new JLabel(titlePic);
+		
+		toSS = new JButton("Select Song ");
 		toSS.addActionListener(this);
-		add(toSS, BorderLayout.SOUTH);
+		toSS.setOpaque(false);
+		toSS.setContentAreaFilled(false);
+		
+		quit = new JButton("    Quit    ");
+		quit.addActionListener(this);
+		quit.setOpaque(false);
+		quit.setContentAreaFilled(false);
+		
+		add(title, BorderLayout.NORTH);
+		add(toSS, BorderLayout.WEST);
+		add(quit, BorderLayout.EAST);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		f.toSongSelect();
+		if(e.getSource() == toSS)
+			f.toSongSelect();
+		if(e.getSource() == quit)
+			System.exit(0);
+	}
+	
+	public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Image centerPic =  (new ImageIcon("lib/Images/MainBG.png")).getImage();
+        ImageObserver io = null;
+		g.drawImage(centerPic, 0, 0, getWidth(), getHeight(), io);
 	}
 }

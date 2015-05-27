@@ -1,4 +1,4 @@
-package screens;
+package Screens;
 
 /**
  * The Main class for this game. Starts the program.

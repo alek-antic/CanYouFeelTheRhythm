@@ -14,7 +14,7 @@ import java.util.UUID;
 
 import javax.swing.Timer;
 
-import screens.GameScreen;
+import Screens.GameScreen;
 import beats.Beat;
 import beats.CircleBeat;
 import beats.Masher;
