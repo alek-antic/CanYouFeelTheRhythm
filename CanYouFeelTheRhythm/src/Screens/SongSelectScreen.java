@@ -44,24 +44,38 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 		setBackground(Color.pink);
 		setLayout(new BorderLayout());
 
-		b = new Beatmap("lib/chasingtime.mp3");
-		Combo testCombo = new Combo();
-		Beat testBeat = new CircleBeat("lib/Images/CircleBeat1.png", 100, 100,
-				100, 1000);
-		Beat testBeat2 = new CircleBeat("lib/Images/CircleBeat2.png", 200, 200,
-				100, 2000);
-		Beat testBeat3 = new CircleBeat("lib/Images/CircleBeat3.png", 300, 300,
-				100, 3000);
-		// Masher testMash = new Masher("lib/Images/MasherFrame1.png",
-		// (int)(f.getWidth()/2.0), (int)(f.getHeight()/2.0), 5000);
-		testCombo.addBeat(testBeat);
-		testCombo.addBeat(testBeat2);
-		testCombo.addBeat(testBeat3);
-		// testCombo.addBeat(testMash);
-		 
-//		Slider testSlider = new Slider("lib/Images/CircleBeat.png", 100, 100, 100, 1000, Color.red, 300, 100);
-//		testCombo.addBeat(testSlider);
-		b.addCombo(testCombo);
+		b = new Beatmap("orangefile.mp3");
+		Combo comboOne = new Combo();
+		Beat one = new CircleBeat("", 100, 100, 100, 972);
+		Beat two = new CircleBeat("", 110, 110, 100, 1326);
+		Beat three = new CircleBeat("", 115, 115, 100, 1824);
+		Beat four = new CircleBeat("", 130, 130, 100, 2162);
+		Beat five = new CircleBeat("", 130, 150, 100, 2318);
+		Beat six = new CircleBeat("", 130, 130, 100, 2684);
+		Beat seven = new CircleBeat("", 130, 130, 100, 3198);
+		Beat eight = new CircleBeat("", 130, 170, 100, 3370);
+		Beat nine = new CircleBeat("", 130, 130, 100, 3738);
+		Beat ten = new CircleBeat("", 190,130, 100, 4000);
+		
+		comboOne.addBeat(one);
+		comboOne.addBeat(two);
+		comboOne.addBeat(three);
+		comboOne.addBeat(four);
+		comboOne.addBeat(five);
+		comboOne.addBeat(six);
+		comboOne.addBeat(seven);
+		comboOne.addBeat(eight);
+		comboOne.addBeat(nine);
+		comboOne.addBeat(ten);
+		
+		Combo comboTwo = new Combo();
+		
+		
+		Beat oneone = new CircleBeat("", 130, 130, 100, 4225);
+		
+		comboTwo.addBeat(oneone);
+		b.addCombo(comboOne);
+//		b.addCombo(comboTwo);
 
 		JLabel ssLabel = new JLabel("Select Your Song");
 		add(ssLabel, BorderLayout.NORTH);
@@ -69,7 +83,6 @@ public class SongSelectScreen extends JPanel implements ActionListener {
 		toMM = new JButton("Back");
 		toMM.addActionListener(this);
 		add(toMM, BorderLayout.SOUTH);
-
 		JPanel selectSong = new JPanel();
 		selectSong.setBackground(Color.pink);
 		song1 = new JButton("song1");

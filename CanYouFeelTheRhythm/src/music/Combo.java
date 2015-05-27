@@ -44,7 +44,7 @@ public class Combo {
 	 */
 	public void setNumbers() {
 		for (int i = 0; i < beats.size(); i++) {
-			beats.get(i).setNumber(i + 1);
+			beats.get(i).setNumber(i % 9 +1);
 		}
 	}
 
